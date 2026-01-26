@@ -1,0 +1,574 @@
+{% extends "base.html" %}
+{% block title %}About DFW Clean Collective{% endblock %}
+{% block content %}
+
+<!-- ================= HERO ================= -->
+
+<!-- ================= OUR STORY ================= -->
+
+<section class="our-story">
+
+  <div class="story-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="story-content">
+
+      <span class="story-label">Our Story</span>
+
+      <h2>Built on Trust. Driven by Quality.</h2>
+
+      <p>
+        At DFW Clean Collective, cleaning is more than a job — it’s our passion. Our team brings
+        deep local knowledge of the Dallas–Fort Worth area and a commitment to meticulous results
+        tailored to every home and business we serve.
+      </p>
+
+      <p>
+        Founded to serve local families and companies with honesty, professionalism, and attention
+        to detail, we focus on communication, reliability, and consistent results.
+      </p>
+
+      <p>
+        From recurring house cleaning to detailed deep cleans and post-construction cleanup,
+        our locally based professionals treat every space like it’s their own.
+      </p>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="story-image">
+      <img src="{{ url_for('static', filename='images/hero-about.jpg') }}"
+           alt="Professional cleaning team">
+    </div>
+<div class="hero-buttons" style="margin-bottom: 40px;">
+      <a href="/booking" class="btn-primary">Book Your Cleaning</a>
+      <a href="/quote" class="btn-secondary">Get Free Quote</a>
+    </div>
+  </div>
+  
+
+</section>
+
+
+
+<!-- ================= CORE VALUES ================= -->
+
+<section class="core-values">
+  <h2 style="margin-bottom: 50px;">Our Core Values</h2>
+
+  <div class="values-grid">
+    <div class="value-card">
+      <h3>Quality of Cleaning</h3>
+      <p>We deliver consistent, detailed results on every visit.</p>
+    </div>
+
+    <div class="value-card">
+      <h3>Attention to Detail</h3>
+      <p>We focus on the spaces others overlook.</p>
+    </div>
+
+    <div class="value-card">
+      <h3>Reliability</h3>
+      <p>On-time, every time — cleanings you can count on.</p>
+    </div>
+
+    <div class="value-card">
+      <h3>Transparent Pricing</h3>
+      <p>No hidden fees, clear quotes, and easy scheduling.</p>
+    </div>
+
+    <div class="value-card">
+      <h3>Satisfaction Guaranteed</h3>
+      <p>We stand behind our work — if it’s not right, we make it right.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= WHY CHOOSE ================= -->
+
+<section class="why-choose">
+  <div class="why-grid">
+
+    <div class="why-stat">
+      <h3>Local Expertise</h3>
+      <p>Serving Dallas & the surrounding Metroplex</p>
+    </div>
+
+    <div class="why-stat">
+      <h3>Flexible Scheduling</h3>
+      <p>Weekly, bi-weekly, one-time or customized plans</p>
+    </div>
+
+    <div class="why-stat">
+      <h3>Professional Team</h3>
+      <p>Insured, background-checked cleaners</p>
+    </div>
+
+    <div class="why-stat">
+      <h3>100% Satisfaction</h3>
+      <p>Peace of mind with every clean</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= SERVICE AREAS SUMMARY ================= -->
+
+<section class="service-areas-summary">
+  <h2>Service Areas We Proudly Cover</h2>
+  <p>
+    DFW Clean Collective delivers professional residential and commercial cleaning services
+    throughout Dallas–Fort Worth, including homes and businesses in:
+  </p>
+
+  <ul class="areas-list">
+    <li>Dallas, TX</li>
+    <li>Plano, TX</li>
+    <li>Garland, TX</li>
+    <li>Rockwall, TX</li>
+    <li>Wylie, TX</li>
+    <li>Sachse, TX</li>
+    <li>Murphy, TX</li>
+    <li>Lucas, TX</li>
+    <li>Parker, TX</li>
+    <li>Lavon, TX</li>
+    <li>Rowlett, TX</li>
+    <li>Fairview, TX</li>
+    <li>Nevada, TX</li>
+  </ul>
+</section>
+
+
+  <!-- FINAL CTA -->
+
+<section class="cta-final">
+
+  <div class="cta-box">
+
+    <h2>Schedule Your Cleaning With DFW Clean Collective</h2>
+
+    <p>
+      Professional residential and commercial cleaning services across the Dallas–Fort Worth area.
+      Book online in minutes or request a free quote today.
+    </p>
+
+    <div class="cta-buttons">
+
+      <a href="/booking" class="cta-btn primary">
+        Book Cleaning Online
+      </a>
+
+      <a href="/quote" class="cta-btn secondary">
+        Request a Free Quote
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+<style>
+
+/* ================= HERO ================= */
+
+.btn-primary{
+  padding:14px 26px;
+  background:#2e483f;
+  color:white;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
+
+.btn-primary:hover{
+  background:#1a2924;
+  transform:translateY(-4px);
+}
+
+.btn-secondary{
+  padding:14px 26px;
+  background:white;
+  border:1px solid #1a2924;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+  color:#1a2924;
+  transition:.3s;
+}
+
+.btn-secondary:hover{
+  background:#1a2924;
+  color:white;
+  transform:translateY(-4px);
+}
+
+/* ================= OUR STORY ================= */
+
+.our-story{
+  width:100%;
+  padding:10px 0;
+  background:#eaedec;
+  display:flex;
+  justify-content:center;
+}
+
+/* Container (same logic as hero-container) */
+
+.story-container{
+  max-width:1200px;
+  width:100%;
+  padding:0 24px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:40px;
+}
+
+/* LEFT CONTENT */
+
+.story-content{
+  padding:40px 0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* Label */
+
+.story-label{
+  font-size:14px;
+  font-weight:600;
+  color:#2e483f;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+/* Heading */
+
+.story-content h2{
+  font-size:38px;
+  font-weight:800;
+  line-height:1.2;
+  color:#1a2924;
+  margin-bottom:18px;
+}
+
+/* Paragraphs */
+
+.story-content p{
+  font-size:16px;
+  color:#4b5f56;
+  line-height:1.7;
+  max-width:520px;
+  margin-bottom:18px;
+}
+
+/* RIGHT IMAGE */
+
+.story-image{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+
+.story-image img{
+  width:100%;
+  max-width:520px;
+  height:auto;
+  border-radius:28px;
+  object-fit:cover;
+  box-shadow:0 25px 60px rgba(0,0,0,0.25);
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:1024px){
+
+  .story-content h2{
+    font-size:34px;
+  }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+  .story-container{
+    grid-template-columns:1fr;
+  }
+
+  .story-content{
+    text-align:center;
+    align-items:center;
+  }
+
+  .story-content p{
+    max-width:100%;
+  }
+
+  .story-image img{
+    max-width:420px;
+  }
+
+}
+
+/* ================= SMALL PHONES ================= */
+
+@media(max-width:480px){
+
+  .story-content h2{
+    font-size:28px;
+  }
+
+}
+
+/* ================= OUR STORY ================= */
+
+.our-story{
+  padding:30px   24px;
+}
+
+.story-container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.story-text h2{
+  font-size:38px; color:#1a2924; margin-bottom:14px;
+}
+
+.story-text p{
+  font-size:16px; color:#4b5f56; line-height:1.7; margin-bottom:14px;
+}
+
+/* ================= CORE VALUES ================= */
+
+.core-values{
+  
+  background:#ffffff;
+  padding:100px 24px;
+  text-align:center;
+}
+
+.values-grid{
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:40px;
+  justify-content: center;
+}
+
+.value-card{
+  background:#f7f9f8;
+  padding:28px 22px;
+  border-radius:18px;
+  border-left:5px solid #2e483f;
+  box-shadow:0 12px 30px rgba(0,0,0,0.15);
+  max-height: 400px;
+}
+
+.value-card h3{
+  font-size:20px;
+  font-weight:700;
+  color:#1a2924;
+  margin-bottom:10px;
+}
+
+.value-card p{
+  font-size:15px;
+  color:#4b5f56;
+  line-height:1.6;
+}
+
+/* ================= WHY CHOOSE ================= */
+
+.why-choose{
+  background:#2e483f;
+  color:#ffffff;
+  padding:60px 24px;
+  text-align:center;
+}
+
+.why-grid{
+  max-width:1000px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:24px;
+}
+
+.why-stat h3{
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.why-stat p{
+  font-size:14px;
+}
+
+/* ================= SERVICE AREAS SUMMARY ================= */
+
+.service-areas-summary{
+  padding:90px 24px;
+  text-align:center;
+}
+
+.service-areas-summary h2{
+  font-size:32px;
+  font-weight:800;
+  color:#1a2924;
+  margin-bottom:18px;
+}
+
+/* GRID */
+
+.areas-list{
+  list-style:none;
+  padding:0;
+  margin:40px auto 0;
+  max-width:720px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:14px;
+}
+
+/* BUTTON STYLE */
+
+.areas-list li{
+  background:#ffffff;
+  border:2px solid #1a2924;
+  color:#1a2924;
+
+  padding:14px 12px;
+  border-radius:999px;
+
+  font-size:15px;
+  font-weight:600;
+  letter-spacing:0.3px;
+
+  cursor:default;
+  transition:all 0.3s ease;
+
+  box-shadow:0 6px 14px rgba(0,0,0,0.08);
+}
+
+/* HOVER EFFECT */
+
+.areas-list li:hover{
+  background:#1a2924;
+  color:#ffffff;
+  transform:translateY(-4px);
+  box-shadow:0 12px 24px rgba(0,0,0,0.18);
+}
+
+
+/* ================= FINAL CTA ================= */
+
+    /* ============================
+   FINAL CTA CONTAINER
+============================ */
+
+.cta-final{
+  padding:120px 24px;
+  background:#ffffff;
+}
+
+/* Card Container */
+
+.cta-box{
+  max-width:1100px;
+  margin:0 auto;
+  background:#dadedd;
+  border-radius:28px;
+  padding:90px 40px;
+  text-align:center;
+  box-shadow:0 18px 50px rgba(0,0,0,0.08);
+}
+
+/* Heading */
+
+.cta-box h2{
+  font-size:42px;
+  font-weight:800;
+  letter-spacing:0.3px;
+  color:#1a2924;
+  margin-bottom:18px;
+}
+
+/* Text */
+
+.cta-box p{
+  max-width:760px;
+  margin:0 auto 60px;
+  font-size:18px;
+  line-height:1.6;
+  color:#4b5f56;
+}
+
+/* Buttons */
+
+.cta-buttons{
+  display:flex;
+  justify-content:center;
+  gap:28px;
+  flex-wrap:wrap;
+}
+
+.cta-btn{
+  padding:18px 44px;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:16px;
+  font-weight:700;
+  transition:0.3s ease;
+}
+
+/* Primary */
+
+.cta-btn.primary{
+  background:#2e483f;
+  color:#ffffff;
+}
+
+.cta-btn.primary:hover{
+  background:#1a2924;
+  transform:translateY(-3px);
+  box-shadow:0 10px 22px rgba(0,0,0,0.18);
+}
+
+/* Secondary */
+
+.cta-btn.secondary{
+  background:#ffffff;
+  color:#1a2924;
+  border:2px solid #1a2924;
+}
+
+.cta-btn.secondary:hover{
+  background:#1a2924;
+  color:#ffffff;
+  transform:translateY(-3px);
+}
+
+@media(max-width:900px){
+  .hero-container,
+  .story-container{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+}
+
+</style>
+
+{% endblock %}

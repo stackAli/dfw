@@ -1,0 +1,921 @@
+{% extends "base.html" %}
+{% block title %}Cleaning Services in Collin & Rockwall County, Texas{% endblock %}
+{% block content %}
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+  <div class="hero-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="hero-content">
+
+      <span class="hero-label">DFW Clean Collective</span>
+
+      <h1>Cleaning Services in Collin & Rockwall County, Texas</h1>
+
+      <h2>Trusted Residential & Commercial Cleaning Near You</h2>
+
+      <h3>
+        House Cleaning, Deep Cleaning, Move-In/Move-Out,
+        Apartment, Kitchen, Bathroom & Post-Construction Cleaning
+      </h3>
+
+      <p>
+        Serving Plano, Garland, Rockwall, Wylie, Sachse,
+        Fairview, Lucas, Parker, Lavon & Nevada.
+        Book professional cleaners online in minutes.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="/booking" class="btn-primary">Book Your Cleaning</a>
+        <a href="/quote" class="btn-secondary">Get Free Quote</a>
+      </div>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="hero-image">
+      <img src="{{ url_for('static', filename='service_hero.jpg') }}" alt="Professional cleaning service">
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="services-intro">
+  <p>
+    At DFW Clean Collective, we provide trusted residential and commercial cleaning
+    services throughout Collin and Rockwall County. From weekly house cleaning to
+    detailed move-out services and post-construction cleanup, our local team helps
+    families and businesses keep their spaces spotless.
+  </p>
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services-page">
+
+<!-- HOUSE CLEANING -->
+<section class="service-row">
+  <div class="service-text">
+
+    <div class="service-title">
+   
+      <h2>House Cleaning Services</h2>
+    </div>
+
+    <p>
+      Weekly or bi-weekly home cleaning for kitchens, bathrooms, and living spaces.
+      Popular with busy families near Legacy West in Plano and neighborhoods in
+      Sachse and Wylie.
+    </p>
+
+    <div class="service-box">
+      <h4>SERVICES INCLUDE:</h4>
+      <ul>
+        <li>Dusting and surface wipe-downs</li>
+        <li>Kitchen and bathroom cleaning</li>
+        <li>Vacuuming and mopping floors</li>
+        <li>Trash removal and light organizing</li>
+      </ul>
+    </div>
+    <a href="/services/house-cleaning" class="service-link">
+    Learn More About House Cleaning Services
+  </a>
+
+  </div>
+
+  <div class="service-image">
+    <img src="{{ url_for('static', filename='images/s1.webp') }}">
+    
+  </div>
+  
+</section>
+
+
+
+<!-- DEEP CLEAN -->
+<section class="service-row reverse">
+  <div class="service-text">
+
+    <div class="service-title">
+     
+      <h2>Deep Cleaning Services</h2>
+    </div>
+
+    <p>
+      Top-to-bottom detail cleaning beyond regular house cleaning. Popular for
+      seasonal deep cleans in Rockwall near Lake Ray Hubbard and Fairview estates.
+    </p>
+
+    <div class="service-box">
+      <h4>SERVICES INCLUDE:</h4>
+      <ul>
+        <li>Baseboard and trim detailing</li>
+        <li>Inside oven and fridge cleaning</li>
+        <li>Grout and tile scrubbing</li>
+        <li>Behind and under furniture cleaning</li>
+      </ul>
+    </div>
+    <a href="/services/deep-cleaning" class="service-link">
+        Learn More About Deep Cleaning Services
+    </a>
+  </div>
+
+  <div class="service-image">
+    <img src="{{ url_for('static', filename='images/s2.webp') }}">
+  </div>
+</section>
+
+
+<!-- MOVE IN OUT -->
+<section class="service-row">
+  <div class="service-text">
+
+    <div class="service-title">
+   
+      <h2>Move-In / Move-Out Cleaning</h2>
+    </div>
+
+    <p>
+      Perfect for renters, landlords, and homeowners needing a fresh start. Popular
+      in Plano apartments near Downtown and family homes in Garland.
+    </p>
+
+    <div class="service-box">
+      <h4>SERVICES INCLUDE:</h4>
+      <ul>
+        <li>Full kitchen and cabinet wipe-downs</li>
+        <li>Bathroom sanitization</li>
+        <li>Carpet vacuuming and stain treatment</li>
+        <li>Window and mirror cleaning</li>
+      </ul>
+    </div>
+    <a href="/services/move-in-out-cleaning" class="service-link">
+        Learn More About Move-In / Move-Out Cleaning
+    </a>
+  </div>
+
+  <div class="service-image">
+    <img src="{{ url_for('static', filename='images/s3.webp') }}">
+  </div>
+</section>
+
+
+<!-- POST CONSTRUCTION -->
+<section class="service-row reverse">
+  <div class="service-text">
+
+    <div class="service-title">
+     
+      <h2>Post-Construction Cleaning</h2>
+    </div>
+
+    <p>
+      After a remodel or new build, dust and debris are everywhere. Homeowners near
+      new developments in Wylie and custom homes in Lucas often request this service.
+    </p>
+
+    <div class="service-box">
+      <h4>SERVICES INCLUDE:</h4>
+      <ul>
+        <li>Dust and debris removal</li>
+        <li>Deep surface cleaning</li>
+        <li>Interior window cleaning</li>
+        <li>Final wipe-down and detailing</li>
+      </ul>
+    </div>
+    <a href="/services/post-construction-cleaning" class="service-link">
+  Learn More About Post-Construction Cleaning
+</a>
+  </div>
+
+  <div class="service-image">
+    <img src="{{ url_for('static', filename='images/s4.webp') }}">
+  </div>
+</section>
+
+<!-- APARTMENT -->
+<section class="service-row">
+  <div class="service-text">
+
+    <div class="service-title">
+     
+      <h2>Apartment Cleaning Services</h2>
+    </div>
+
+    <p>
+      Perfect for renters who need regular or one-time cleaning. Popular with
+      residents in Plano’s Legacy West apartments and Garland complexes.
+    </p>
+
+    <div class="service-box">
+      <h4>SERVICES INCLUDE:</h4>
+      <ul>
+        <li>Living room, bedroom, and hallway cleaning</li>
+        <li>Kitchen and bathroom sanitation</li>
+        <li>Floors vacuumed and mopped</li>
+        <li>Trash removal</li>
+      </ul>
+    </div>
+     <a href="/services/apartment-cleaning" class="service-link">
+  Learn More About Apartment Cleaning
+</a>
+  </div>
+
+  <div class="service-image">
+    <img src="{{ url_for('static', filename='images/s5.webp') }}">
+  </div>
+ 
+</section>
+
+<!-- KITCHEN -->
+<section class="service-row reverse">
+  <div class="service-text">
+
+    <div class="service-title">
+   
+      <h2>Kitchen Cleaning Services</h2>
+    </div>
+
+    <p>
+      Grease and grime build fast. A favorite for families in Wylie and homeowners
+      in Parker who love sparkling kitchens.
+    </p>
+
+    <div class="service-box">
+      <h4>SERVICES INCLUDE:</h4>
+      <ul>
+        <li>Countertop and cabinet wipe-downs</li>
+        <li>Sink and faucet polishing</li>
+        <li>Stove, oven, and microwave cleaning</li>
+        <li>Appliance deep cleaning on request</li>
+      </ul>
+    </div>
+      <a href="/services/kitchen-cleaning" class="service-link">
+  Learn More About Kitchen Cleaning
+</a>
+  </div>
+
+  <div class="service-image">
+    <img src="{{ url_for('static', filename='images/s6.webp') }}">
+  </div>
+
+</section>
+
+<!-- BATHROOM -->
+<section class="service-row">
+  <div class="service-text">
+
+    <div class="service-title">
+     
+      <h2>Bathroom Cleaning Services</h2>
+    </div>
+
+    <p>
+      Bathrooms need regular sanitizing. We help homeowners in Sachse, Nevada,
+      and Lavon keep bathrooms fresh and germ-free.
+    </p>
+
+    <div class="service-box">
+      <h4>SERVICES INCLUDE:</h4>
+      <ul>
+        <li>Toilet and shower disinfecting</li>
+        <li>Mirror and glass cleaning</li>
+        <li>Sink and faucet scrubbing</li>
+        <li>Floor and grout cleaning</li>
+      </ul>
+    </div>
+      <a href="/services/bathroom-cleaning" class="service-link">
+  Learn More About Bathroom Cleaning
+</a>
+  </div>
+
+  <div class="service-image">
+    <img src="{{ url_for('static', filename='images/s7.webp') }}">
+  </div>
+
+</section>
+
+</section>
+
+
+<style>
+    /* ================= HERO ================= */
+/* =====================
+   HERO SECTION
+===================== */
+/* SERVICE CTA LINK */
+
+/* SERVICE CTA BUTTON (Professional Outline) */
+
+.service-link{
+  display:inline-block;
+  margin-top:22px;
+  padding:14px 34px;
+
+  background:#ffffff;
+  color:#1a2924;
+
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:0.3px;
+
+  border-radius:999px;
+  border:2px solid #1a2924;
+
+  text-decoration:none;
+
+  transition:all 0.3s ease;
+}
+
+/* Hover */
+
+.service-link:hover{
+  background:#1a2924;
+  color:#ffffff;
+  transform:translateY(-3px);
+  box-shadow:0 10px 22px rgba(0,0,0,0.18);
+}
+
+
+.hero{
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color: #eaedec;
+}
+
+/* CONTAINER */
+
+.hero-container{
+  max-width:1200px;
+  width:100%;
+  padding:0 24px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:40px;
+}
+
+/* LEFT CONTENT */
+
+.hero-content{
+  padding:40px 0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* TEXT */
+
+.hero-label{
+  font-size:14px;
+  font-weight:600;
+  color:#1a2924;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.hero-content h1{
+  font-size:42px;
+  font-weight:800;
+  line-height:1.2;
+  color:#1a2924;
+  margin-bottom:14px;
+}
+
+.hero-content h2{
+  font-size:20px;
+  font-weight:600;
+  color:#1a2924;
+  margin-bottom:12px;
+}
+
+.hero-content h3{
+  font-size:18px;
+  font-weight:500;
+  color:#4b5f56;
+  margin-bottom:14px;
+}
+
+.hero-content p{
+  font-size:16px;
+  color:#4b5f56;
+  max-width:520px;
+  margin-bottom:28px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.btn-primary{
+  padding:14px 26px;
+  background:#2e483f;
+  color:white;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
+
+.btn-primary:hover{
+  background:#1a2924;
+  transform:translateY(-4px);
+}
+
+.btn-secondary{
+  padding:14px 26px;
+  background:white;
+  border:1px solid #1a2924;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+  color:#1a2924;
+  transition:.3s;
+}
+
+.btn-secondary:hover{
+  background:#1a2924;
+  color:white;
+  transform:translateY(-4px);
+}
+
+/* RIGHT IMAGE */
+
+.hero-image{
+  height: 75%;  
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+
+.hero-image img{
+  width:100%;
+  max-width:520px;
+  height:auto;
+  border-radius:28px;
+  object-fit:cover;
+  box-shadow:0 25px 60px rgba(0,0,0,0.25);
+}
+
+/* =====================
+   TABLET
+===================== */
+
+@media(max-width:1024px){
+
+  .hero{
+    min-height:auto;
+    padding:60px 0;
+  }
+
+  .hero-content h1{
+    font-size:36px;
+  }
+
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media(max-width:900px){
+
+  .hero-container{
+    grid-template-columns:1fr;
+  }
+
+  .hero-content{
+    text-align:center;
+    align-items:center;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .hero-image img{
+    max-width:420px;
+  }
+
+}
+
+/* =====================
+   SMALL PHONES
+===================== */
+
+@media(max-width:480px){
+
+  .hero-content h1{
+    font-size:28px;
+  }
+
+  .btn-primary,
+  .btn-secondary{
+    width:100%;
+    text-align:center;
+  }
+
+}
+
+/* ================= INTRO ================= */
+
+.services-intro{
+  max-width:900px;
+  margin:80px auto;
+  padding:0 24px;
+  text-align:center;
+  font-size:18px;
+  line-height:1.8;
+  color:#4b5f56;
+}
+
+/* ================= SERVICES ================= */
+
+.services-page{
+  background:white;
+}
+
+/* ROW */
+
+.service-row{
+  max-width:1200px;
+  margin:0 auto;
+  padding:100px 24px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+
+.service-row.reverse{
+  direction:rtl;
+}
+
+.service-row.reverse>*{
+  direction:ltr;
+}
+
+/* TEXT */
+
+.service-title{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:20px;
+}
+
+.service-icon{
+  width:40px;
+  height:40px;
+}
+
+.service-text h2{
+  font-size:34px;
+  font-weight:800;
+  color:#1a2924;
+}
+
+.service-text p{
+  font-size:17px;
+  color:#4b5f56;
+  line-height:1.7;
+  max-width:520px;
+  margin-bottom:26px;
+}
+
+/* BOX */
+
+.service-box{
+  background:#f7f9f8;
+  border-left:5px solid #2e483f;
+  padding:28px;
+  border-radius:14px;
+  margin-bottom:30px;
+}
+
+.service-box h4{
+  font-size:14px;
+  letter-spacing:1px;
+  margin-bottom:14px;
+}
+
+.service-box ul{
+  list-style:none;
+  padding:0;
+}
+
+.service-box li{
+  padding-left:18px;
+  margin-bottom:8px;
+  position:relative;
+}
+
+.service-box li::before{
+  content:"•";
+  position:absolute;
+  left:0;
+  color:#2e483f;
+}
+
+/* IMAGE */
+
+.service-image img{
+  width:100%;
+  height:500px;
+  object-fit:cover;
+  
+  border-radius:26px;
+  box-shadow:0 20px 60px rgba(0,0,0,.2);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+  .services-hero h1{
+    font-size:34px;
+  }
+
+  .service-row{
+    grid-template-columns:1fr;
+    gap:50px;
+    padding:70px 22px;
+  }
+
+  .service-text h2{
+    font-size:28px;
+  }
+
+  .service-image img{
+    height:300px;
+  }
+
+}
+
+</style>
+
+
+<!-- ================= WHY CHOOSE DFW ================= -->
+
+<section class="why-dfw">
+
+  <div class="why-header">
+    <span class="why-label">Why Choose</span>
+    <h2>DFW Clean Collective</h2>
+  </div>
+
+  <div class="why-grid">
+
+    <div class="why-card">
+      <h3>Reliable Scheduling</h3>
+      <p>
+        On-time arrivals and consistent service you can count on,
+        whether weekly, bi-weekly, or one-time cleanings.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <h3>Experienced Cleaners</h3>
+      <p>
+        Trained, vetted, and insured professionals who treat your
+        home or business with care and respect.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <h3>Transparent Pricing</h3>
+      <p>
+        Upfront quotes, no hidden fees, and clear communication
+        from booking to completion.
+      </p>
+    </div>
+
+  </div>
+
+ 
+
+  <!-- FINAL CTA -->
+
+<section class="cta-final">
+
+  <div class="cta-box">
+
+    <h2>Schedule Your Cleaning With DFW Clean Collective</h2>
+
+    <p>
+      Professional residential and commercial cleaning services across the Dallas–Fort Worth area.
+      Book online in minutes or request a free quote today.
+    </p>
+
+    <div class="cta-buttons">
+
+      <a href="/booking" class="cta-btn primary">
+        Book Cleaning Online
+      </a>
+
+      <a href="/quote" class="cta-btn secondary">
+        Request a Free Quote
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</section>
+<style>
+    /* ===============================
+   WHY DFW SECTION
+================================ */
+
+.why-dfw{
+  background:#ffffff;
+  padding:120px 24px;
+  text-align:center;
+}
+
+/* Header */
+
+.why-header{
+  margin-bottom:70px;
+}
+
+.why-label{
+  display:block;
+  font-size:14px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:#2e483f;
+  font-weight:600;
+}
+
+.why-header h2{
+  font-size:38px;
+  font-weight:800;
+  color:#1a2924;
+}
+
+/* Cards */
+
+.why-grid{
+  max-width:1100px;
+  margin:0 auto 90px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+
+.why-card{
+  background:#ffffff;
+  padding:50px 36px;
+  border-radius:18px;
+  border:2px solid #1a2924;
+  box-shadow:8px 8px 0 #1a2924;
+  transition:.3s ease;
+}
+
+.why-card:hover{
+  transform:translateY(-6px);
+  box-shadow:12px 12px 0 #1a2924;
+}
+
+.why-card h3{
+  font-size:20px;
+  font-weight:800;
+  margin-bottom:14px;
+  color:#1a2924;
+}
+
+.why-card p{
+  font-size:16px;
+  line-height:1.6;
+  color:#4b5f56;
+}
+
+
+
+</style>
+<style>
+    /* ============================
+   FINAL CTA CONTAINER
+============================ */
+
+.cta-final{
+  padding:120px 24px;
+  background:#ffffff;
+}
+
+/* Card Container */
+
+.cta-box{
+  max-width:1100px;
+  margin:0 auto;
+  background:#dadedd;
+  border-radius:28px;
+  padding:90px 40px;
+  text-align:center;
+  box-shadow:0 18px 50px rgba(0,0,0,0.08);
+}
+
+/* Heading */
+
+.cta-box h2{
+  font-size:42px;
+  font-weight:800;
+  letter-spacing:0.3px;
+  color:#1a2924;
+  margin-bottom:18px;
+}
+
+/* Text */
+
+.cta-box p{
+  max-width:760px;
+  margin:0 auto 60px;
+  font-size:18px;
+  line-height:1.6;
+  color:#4b5f56;
+}
+
+/* Buttons */
+
+.cta-buttons{
+  display:flex;
+  justify-content:center;
+  gap:28px;
+  flex-wrap:wrap;
+}
+
+.cta-btn{
+  padding:18px 44px;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:16px;
+  font-weight:700;
+  transition:0.3s ease;
+}
+
+/* Primary */
+
+.cta-btn.primary{
+  background:#2e483f;
+  color:#ffffff;
+}
+
+.cta-btn.primary:hover{
+  background:#1a2924;
+  transform:translateY(-3px);
+  box-shadow:0 10px 22px rgba(0,0,0,0.18);
+}
+
+/* Secondary */
+
+.cta-btn.secondary{
+  background:#ffffff;
+  color:#1a2924;
+  border:2px solid #1a2924;
+}
+
+.cta-btn.secondary:hover{
+  background:#1a2924;
+  color:#ffffff;
+  transform:translateY(-3px);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+  .cta-box{
+    padding:60px 24px;
+  }
+
+  .cta-box h2{
+    font-size:32px;
+  }
+
+  .cta-btn{
+    width:100%;
+    max-width:300px;
+  }
+
+}
+
+</style>
+{% endblock %}

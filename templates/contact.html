@@ -1,0 +1,256 @@
+{% extends "base.html" %}
+{% block title %}Contact DFW Clean Collective{% endblock %}
+{% block content %}
+
+<!-- ================= CONTACT HERO ================= -->
+
+<section class="contact-hero">
+
+  <div class="contact-overlay"></div>
+
+  <div class="contact-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="contact-content">
+
+      <span class="contact-label">24/7 Cleaning Support</span>
+
+      <h1>Contact DFW Clean Collective</h1>
+
+      <h2>Residential & Commercial Cleaning Services</h2>
+
+      <p class="contact-sub">
+        Call DFW Clean Collective today or fill out the form to request service.
+      </p>
+
+      <p class="contact-phone">
+        Call: <a href="tel:2145551234">(214) 555-1234</a>
+      </p>
+
+      <p class="contact-areas">
+        Serving Plano, Garland, Rockwall, Wylie, Sachse, Fairview, Lucas, Parker,
+        Lavon, Nevada & surrounding areas.
+      </p>
+
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="contact-form-card">
+
+      <form action="/contact" method="POST">
+
+        <label>Full Name</label>
+        <input type="text" name="name" required>
+
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="you@email.com" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" placeholder="(214) 555-1234" required>
+
+        <label>Service Needed</label>
+        <select name="service">
+          <option>House Cleaning</option>
+          <option>Deep Cleaning</option>
+          <option>Move-In / Move-Out</option>
+          <option>Apartment Cleaning</option>
+          <option>Post-Construction Cleaning</option>
+          <option>Commercial Cleaning</option>
+        </select>
+
+        <label>Message</label>
+        <textarea name="message" rows="4"></textarea>
+
+        <button type="submit">Send Request</button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+/* ================= CONTACT HERO ================= */
+
+.contact-hero{
+  position:relative;
+  
+  min-height:100vh;
+  background:
+    url("{{ url_for('static', filename='images/hero-home.jpg') }}")
+    center/cover no-repeat;
+  display:flex;
+  align-items:center;
+}
+
+/* Dark overlay */
+
+
+
+/* Container */
+
+.contact-container{
+  position:relative;
+  z-index:2;
+  max-width:1200px;
+  margin:auto;
+  padding:0 24px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+
+/* LEFT SIDE */
+
+.contact-label{
+  color:#1a2924;
+  font-size:14px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  font-weight:600;
+}
+
+.contact-content h1{
+  font-size:46px;
+  font-weight:800;
+  color:#1a2924;
+  margin:14px 0;
+}
+
+.contact-content h2{
+  font-size:22px;
+  color:#1a2924;
+  margin-bottom:18px;
+}
+
+.contact-sub{
+  color:#1a2924;
+  font-size:17px;
+  margin-bottom:18px;
+}
+
+.contact-phone{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.contact-phone a{
+  color:#1a2924;
+  text-decoration:none;
+}
+
+.contact-phone a:hover{
+  text-decoration:underline;
+}
+
+.contact-areas{
+  color:#1a2924;
+  font-size:15px;
+  max-width:480px;
+}
+
+/* FORM CARD */
+
+.contact-form-card{
+  margin-top: 100px;  
+  margin-bottom: 100px;
+  background:#d0d5d3;
+  padding:46px 40px;
+  border-radius:26px;
+  box-shadow:0 30px 70px rgba(0,0,0,0.35);
+}
+
+/* FORM */
+
+.contact-form-card form{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.contact-form-card label{
+  font-size:13px;
+  font-weight:600;
+  color:#1a2924;
+}
+
+.contact-form-card input,
+.contact-form-card textarea,
+.contact-form-card select{
+  padding:14px 16px;
+  border-radius:999px;
+  border:1px solid #d0d5d3;
+  font-size:14px;
+  outline:none;
+}
+
+.contact-form-card textarea{
+  border-radius:18px;
+  resize:none;
+}
+
+.contact-form-card input:focus,
+.contact-form-card textarea:focus,
+.contact-form-card select:focus{
+  border-color:#2e483f;
+}
+
+/* BUTTON */
+
+.contact-form-card button{
+  margin-top:12px;
+  padding:16px;
+  border-radius:999px;
+  border:none;
+  background:#2e483f;
+  color:white;
+  font-size:15px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.3s ease;
+}
+
+.contact-form-card button:hover{
+  background:#1a2924;
+  transform:translateY(-3px);
+  box-shadow:0 10px 20px rgba(0,0,0,.25);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+  .contact-container{
+    grid-template-columns:1fr;
+  }
+
+  .contact-content{
+    text-align:center;
+  }
+
+  .contact-areas{
+    margin:auto;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .contact-content h1{
+    font-size:32px;
+  }
+
+  .contact-form-card{
+    padding:36px 24px;
+  }
+
+}
+
+</style>
+
+{% endblock %}

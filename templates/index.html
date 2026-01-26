@@ -1,0 +1,1244 @@
+{% extends "base.html" %}
+
+{% block title %}Home | DFW Collective{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <span class="hero-label">DFW Clean Collective</span>
+
+    <h1>Cleaning Services in Dallas–Fort Worth</h1>
+
+    <h2>Professional Residential & Commercial Cleaning</h2>
+
+    <h3>Deep Cleaning, Move-In/Move-Out & Post-Construction Cleaning</h3>
+
+    <p>
+      Serving Dallas, Plano, Garland, Rockwall, Wylie & Sachse.
+      Book trusted cleaners online in minutes.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="/booking" class="btn-primary">Book Your Cleaning</a>
+      <a href="/quote" class="btn-secondary">Get Free Quote</a>
+    </div>
+
+  </div>
+
+</section>
+<style>
+    /* =====================
+   HERO SECTION
+===================== */
+
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  background:
+    url("{{ url_for('static', filename='images/hero-home.jpg') }}")
+    center/cover no-repeat;
+}
+
+/* Dark overlay for readability */
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    rgba(204, 225, 218, 2.75),
+
+  );
+}
+
+/* Content */
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:1200px;
+  padding:0 24px;
+  margin:auto;
+  color:#1a2924;
+}
+
+/* Label */
+
+.hero-label{
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:#1a2924;
+  margin-bottom:12px;
+  display:block;
+}
+
+/* Headings */
+
+.hero-content h1{
+  font-size:48px;
+  font-weight:800;
+  line-height:1.15;
+  margin-bottom:16px;
+}
+
+.hero-content h2{
+  font-size:22px;
+  font-weight:600;
+  margin-bottom:10px;
+  color:#1a2924;
+}
+
+.hero-content h3{
+  font-size:18px;
+  font-weight:500;
+  margin-bottom:18px;
+  color:#1a2924;
+}
+
+/* Paragraph */
+
+.hero-content p{
+  max-width:620px;
+  font-size:17px;
+  line-height:1.6;
+  color:#1a2924;
+  margin-bottom:34px;
+}
+
+/* Buttons */
+
+.hero-buttons{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.btn-primary{
+  padding:15px 34px;
+  background:#2e483f;
+  color:#ffffff;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+  transition:.25s ease;
+}
+
+.btn-primary:hover{
+  background:#1a2924;
+  transform:translateY(-3px);
+  box-shadow:0 10px 20px rgba(0,0,0,0.25);
+}
+
+.btn-secondary{
+  padding:15px 34px;
+  border:2px solid #ffffff;
+  border-radius:999px;
+  color:#ffffff;
+  font-weight:700;
+  text-decoration:none;
+  transition:.25s ease;
+}
+
+.btn-secondary:hover{
+  background:#ffffff;
+  color:#1a2924;
+  transform:translateY(-3px);
+}
+
+/* =====================
+   TABLET
+===================== */
+
+@media(max-width:1024px){
+
+  .hero-content h1{
+    font-size:40px;
+  }
+
+}
+
+/* =====================
+   MOBILE
+===================== */
+
+@media(max-width:768px){
+
+  .hero{
+    min-height:auto;
+    padding:100px 0 90px;
+  }
+
+  .hero-content{
+    text-align:center;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .hero-content h1{
+    font-size:32px;
+  }
+
+  .hero-content h2{
+    font-size:18px;
+  }
+
+  .hero-content p{
+    font-size:15px;
+  }
+
+}
+
+/* =====================
+   SMALL PHONES
+===================== */
+
+@media(max-width:480px){
+
+  .btn-primary,
+  .btn-secondary{
+    width:100%;
+    text-align:center;
+  }
+
+}
+
+</style>
+
+
+
+<section class="services">
+  <div class="container">
+    <h2 class="section-title">Our Cleaning Services</h2>
+    <p class="section-subtitle">
+      Professional Residential & Commercial Cleaning Services in Dallas–Fort Worth. Choose from a variety of services tailored to your home or business.
+    </p>
+
+    <div class="services-grid">
+
+      <!-- Service Card -->
+      <div class="service-card">
+        <img src="{{ url_for('static', filename='images/standard_clean.jpg') }}" alt="Standard Clean">
+        <h3>House Cleaning Services</h3>
+        <p>House cleaning in Dallas-Fort Worth for kitchens, bathrooms, and living spaces.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="{{ url_for('static', filename='images/deep_clean.jpg') }}" alt="Deep Clean">
+        <h3>Deep Cleaning Services</h3>
+        <p>Top-to-bottom deep cleaning across Dallas-Fort Worth, from baseboards to appliances.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="{{ url_for('static', filename='images/move_in_out.jpg') }}" alt="Move-In / Move-Out">
+        <h3>Move-In / Move-Out Cleaning</h3>
+        <p>Professional cleaning for offices, retail, and business spaces across DFW.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="{{ url_for('static', filename='images/Kitchen.jpg') }}" alt="Post-Construction Clean">
+        <h3>Kitchen Cleaning</h3>
+        <p>House cleaning in Dallas-Fort Worth for kitchens, bathrooms, and living spaces.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="{{ url_for('static', filename='images/commercial_clean.jpg') }}" alt="Commercial Clean">
+        <h3>Office & Commercial Cleaning</h3>
+        <p>Professional cleaning for offices, retail, and business spaces across DFW.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="{{ url_for('static', filename='images/apartment_clean.jpg') }}" alt="Apartment Cleaning">
+        <h3>Apartment Cleaning</h3>
+        <p>Efficient and thorough apartment cleaning for Dallas, Plano, Garland, Rockwall, Wylie & Sachse.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="{{ url_for('static', filename='images/construction.jpg') }}" alt="Apartment Cleaning">
+        <h3>Post-Construction Cleaning</h3>
+        <p>Post-construction cleaning in Dallas-Fort Worth to clear dust and debris after building or remodeling.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="{{ url_for('static', filename='images/bathroomm.jpg') }}" alt="Apartment Cleaning">
+        <h3>Bathroom Cleaning </h3>
+        <p>Bathroom sanitization in Dallas-Fort Worth — toilets, showers, mirrors, and tile.</p>
+      </div>
+
+
+    </div>
+    <div class="services-btn-wrapper" style="margin-top: 100px; margin-bottom: -20px;">
+      <a href="/services" class="btn-primary btn-center">Explore Services</a>
+    </div>
+  </div>
+</section>
+
+<style>
+/* =====================
+   SERVICES SECTION
+===================== */
+
+.services {
+  padding: 80px 24px;
+  background: #f7f9f8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #1a2924;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #4b5f56;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 320px); /* fixed-width cards */
+  gap: 40px;
+
+  /* Center the whole grid horizontally */
+  justify-content: center;
+
+  /* Center last row items */
+  justify-items: center;
+}
+
+
+.service-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 50px 24px;
+  text-align: center;
+
+  /* Dark border only on right and bottom */
+  box-shadow: 10px 10px 0 #293d36; /* horizontal 4px, vertical 4px, no blur, dark green */
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  /* Slightly stronger dark border on hover */
+  box-shadow: 6px 6px 0 #1f4c36;
+}
+
+.service-card img {
+  background: none;  
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #2f6b4f;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #4b5f56;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.btn-center {
+   
+  padding: 14px 26px;
+  border: 1px solid #1a2924;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  color: #1a2924;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.btn-center:hover {
+  background: #1a2924;     /* fill with primary green */
+  color: #ffffff;          /* white text */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  border-color: #ffffff;   /* slightly darker border */
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 60px 16px;
+  }
+}
+</style>
+
+
+
+<section class="help-banner">
+  <div class="help-card">
+
+    <h2 class="help-title">Need Help Now?</h2>
+
+    <p class="help-subtitle">
+      Call us 24/7 for immediate assistance
+    </p>
+
+    <a href="tel:9809902722" class="help-phone">
+      (980) 990-2722
+    </a>
+
+  </div>
+</section>
+<style>
+    /* =========================
+   HELP BANNER
+========================= */
+
+.help-banner{
+   
+  padding: 80px 20px;
+  display:flex;
+  justify-content:center;
+  background:#ffffff;
+}
+
+.help-card{
+  background:#2e483f; /* orange */
+  width:100%;
+  max-width:1200px;
+  padding:80px 30px;
+  border-radius:28px;
+  text-align:center;
+
+  border:6px solid #000000;
+  box-shadow:12px 12px 0 #000000;
+
+  position:relative;
+}
+
+/* Title */
+
+.help-title{
+  font-family: "Imperial Script", cursive;
+  font-size:64px;
+  font-weight:900;
+  color:#ffffff;
+  margin-bottom:30px;
+
+  /* Fake 3D black shadow */
+  text-shadow:
+    4px 4px 0 #000000,
+    6px 6px 0 #000000;
+}
+
+/* Subtitle */
+
+.help-subtitle{
+  font-size:20px;
+  font-weight:600;
+  color:#ffffff;
+  margin-bottom:40px;
+}
+
+/* Phone Button */
+
+.help-phone{
+  display:inline-block;
+  background:#ffffff;
+  color:#000000;
+  font-size:32px;
+  font-weight:800;
+  padding:22px 48px;
+  border-radius:999px;
+  text-decoration:none;
+
+  border:4px solid #000000;
+  transition:0.25s ease;
+}
+
+/* Hover */
+
+.help-phone:hover{
+  transform:translateY(-4px);
+  box-shadow:6px 6px 0 #000000;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+  .help-title{
+    font-size:42px;
+  }
+
+  .help-phone{
+    font-size:24px;
+    padding:18px 32px;
+  }
+
+  .help-card{
+    padding:60px 20px;
+  }
+}
+
+</style>
+<section class="values-section">
+
+  <div class="values-grid">
+
+    <!-- 1 -->
+    <div class="value-item">
+      <div class="value-number">1</div>
+      <h3>PROFESSIONAL CLEANING</h3>
+      <p>Experienced cleaners delivering high-quality residential and commercial cleaning services.</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="value-item">
+      <div class="value-number">2</div>
+      <h3>ATTENTION TO DETAIL</h3>
+      <p>Thorough, top-to-bottom cleaning with focus on kitchens, bathrooms, floors, and high-touch areas.</p>
+    </div>
+
+    <!-- 3 -->
+    <div class="value-item">
+      <div class="value-number">3</div>
+      <h3>TRANSPARENT PRICING</h3>
+      <p>Clear, upfront pricing with no hidden fees and honest communication.</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="value-item">
+      <div class="value-number">4</div>
+      <h3>FAST & RELIABLE</h3>
+      <p>On-time arrivals and efficient service that fits your schedule.</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="value-item">
+      <div class="value-number">5</div>
+      <h3>VETTED & INSURED</h3>
+      <p>Background-checked, insured professionals you can trust in your home or business.</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="value-item">
+      <div class="value-number">6</div>
+      <h3>SATISFACTION GUARANTEED</h3>
+      <p>Your happiness comes first — we stand behind every clean.</p>
+    </div>
+
+  </div>
+
+</section>
+<style>
+    /* ============================
+   VALUES SECTION
+============================ */
+
+.values-section{
+  padding:110px 24px;
+  background:#ffffff;
+}
+
+.values-grid{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:90px 60px;
+  text-align:center;
+}
+
+/* ITEM */
+
+.value-item{
+  max-width:320px;
+  margin:0 auto;
+}
+
+/* NUMBER CIRCLE */
+
+.value-number{
+  width:70px;
+  height:70px;
+  margin:0 auto 28px;
+  border-radius:50%;
+  background:#2e483f;
+  color:#ffffff;
+  font-size:26px;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  /* HARD OUTLINE LOOK */
+  border:4px solid #000000;
+  box-shadow:6px 6px 0 #000000;
+}
+
+
+/* TITLE */
+
+.value-item h3{
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:0.5px;
+  color:#1a2924;
+  margin-bottom:14px;
+}
+
+/* TEXT */
+
+.value-item p{
+  font-size:16px;
+  line-height:1.6;
+  color:#4b5f56;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+@media(max-width:900px){
+
+  .values-grid{
+    grid-template-columns:1fr;
+    gap:60px;
+  }
+
+}
+
+</style>
+
+<section class="brand-intro">
+
+  <!-- Top Row -->
+  <div class="brand-top">
+    <div class="brand-logo">
+      <img src="{{ url_for('static', filename='images/dfwlogo.png') }}" alt="DFW Clean Collective Logo">
+    </div>
+
+    <div class="brand-tagline">
+      <h2>YOUR TRUSTED DALLAS–FORT WORTH</h2>
+      <h2>CLEANING PARTNER</h2>
+    </div>
+  </div>
+
+  <!-- Center Content -->
+  <div class="brand-center">
+
+    <h3>PROFESSIONAL CLEANERS WITH A CUSTOMER-FIRST APPROACH</h3>
+
+    <p>
+      At DFW Clean Collective, we understand that a clean space means peace of mind.
+      Our experienced cleaning team delivers reliable residential and commercial
+      cleaning across Dallas–Fort Worth, using proven processes, eco-friendly products,
+      and attention to detail that shows.
+    </p>
+
+    <p>
+      From homes and apartments to offices and retail spaces, we provide consistent,
+      high-quality cleaning with fast response times and flexible scheduling.
+      We're not just cleaners — we're your long-term cleaning partner.
+    </p>
+
+    <a href="/booking" class="brand-btn">
+      BOOK YOUR CLEANING
+    </a>
+
+  </div>
+
+</section>
+
+
+<style>
+    /* ============================
+   BRAND INTRO SECTION
+============================ */
+
+.brand-intro{
+  padding:120px 20px;
+  background:#ffffff;
+  text-align:center;
+}
+
+/* Top Row */
+
+.brand-top{
+  max-width:1200px;
+  margin:0 auto 80px;
+  display:flex;
+  align-items:center;
+  
+ 
+}
+
+.brand-logo img{
+  max-width:260px;
+}
+
+/* Right Headline */
+
+.brand-tagline h2{
+  font-size:42px;
+  font-weight:800;
+  text-transform:uppercase;
+  color:#1a2924;
+  
+}
+
+/* Center Content */
+
+.brand-center{
+  max-width:900px;
+  margin:0 auto;
+}
+
+.brand-center h3{
+  font-size:32px;
+  font-weight:800;
+  text-transform:uppercase;
+  margin-bottom:28px;
+  color:#1a2924;
+}
+
+.brand-center p{
+  font-size:18px;
+  color:#4b5f56;
+  line-height:1.7;
+  margin-bottom:22px;
+}
+
+/* CTA Button */
+
+.brand-btn{
+  display:inline-block;
+  margin-top:30px;
+  background:#2e483f;
+  color:#ffffff;
+  padding:16px 40px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  letter-spacing:0.5px;
+  transition:0.3s ease;
+}
+
+.brand-btn:hover{
+  background:#1a2924;
+  transform:translateY(-4px);
+  box-shadow:0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+  .brand-top{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .brand-tagline h2{
+    font-size:34px;
+  }
+
+  .brand-center h3{
+    font-size:26px;
+  }
+
+}
+
+</style>
+<section class="booking-steps">
+
+  <h2 class="steps-title">How Booking Works</h2>
+
+  <div class="steps-grid">
+
+    <!-- Step 1 -->
+    <div class="step-card">
+      <div class="step-number">01</div>
+      <h3>Choose Your Service</h3>
+      <p>
+        Select from standard house cleaning, deep cleaning,
+        move-in/move-out, post-construction, or commercial cleaning.
+        Each service is tailored for homes and businesses across
+        Wylie, Murphy, Sachse, Rowlett, Garland, Rockwall, and
+        surrounding DFW areas.
+      </p>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step-card">
+      <div class="step-number">02</div>
+      <h3>Schedule Online</h3>
+      <p>
+        Click <strong>Book Now</strong>, choose your preferred
+        date and time, and secure your appointment instantly.
+        Our 24/7 online system shows real-time availability and
+        sends confirmation right to your email.
+      </p>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step-card">
+      <div class="step-number">03</div>
+      <h3>We Handle The Rest</h3>
+      <p>
+        Our vetted, insured, and professional cleaners arrive
+        fully equipped with quality supplies and eco-friendly
+        options upon request — delivering a spotless, stress-free
+        clean backed by our satisfaction guarantee.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+<style>
+    /* ============================
+   BOOKING STEPS
+============================ */
+
+.booking-steps{
+  padding:100px 24px;
+  background:#ffffff;
+  text-align:center;
+}
+
+.steps-title{
+  font-size:36px;
+  font-weight:800;
+  color:#1a2924;
+  margin-bottom:70px;
+}
+
+/* Grid */
+
+.steps-grid{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:50px;
+}
+
+/* Card */
+
+.step-card{
+  background:#f7f9f8;
+  padding:55px 40px;
+  border-radius:20px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+  transition:0.3s ease;
+}
+
+.step-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* Number */
+
+.step-number{
+  width:56px;
+  height:56px;
+  margin:0 auto 22px;
+  border-radius:50%;
+  background:#2e483f;
+  color:#ffffff;
+  font-size:18px;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Heading */
+
+.step-card h3{
+  font-size:22px;
+  font-weight:700;
+  color:#1a2924;
+  margin-bottom:18px;
+}
+
+/* Text */
+
+.step-card p{
+  font-size:16px;
+  line-height:1.7;
+  color:#4b5f56;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+  .steps-grid{
+    grid-template-columns:1fr;
+  }
+
+  .steps-title{
+    font-size:30px;
+    margin-bottom:50px;
+  }
+
+}
+
+</style>
+
+<!-- SERVICE AREA CORRIDOR SECTION -->
+<section class="service-corridor">
+
+  <div class="corridor-container">
+
+    <!-- LEFT IMAGE PANEL -->
+    <div class="corridor-image">
+      
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="corridor-content">
+
+      <!-- GROUP 1 -->
+      <h3 class="corridor-title">MAJOR CITIES</h3>
+
+      <div class="corridor-pills">
+        <span>Dallas</span>
+        <span>Plano</span>
+        <span>Garland</span>
+        <span>Rockwall</span>
+        <span>Rowlett</span>
+      </div>
+
+      <!-- GROUP 2 -->
+      <h3 class="corridor-title">COLLIN & ROCKWALL COUNTY</h3>
+
+      <div class="corridor-pills">
+        <span>Wylie</span>
+        <span>Sachse</span>
+        <span>Murphy</span>
+        <span>Lucas</span>
+        <span>Parker</span>
+        <span>Fairview</span>
+        <span>Lavon</span>
+        <span>Nevada</span>
+        <span>St. Paul</span>
+        <span>Royse City</span>
+      </div>
+
+      <!-- FOOT NOTE -->
+      <div class="corridor-note">
+        Plus surrounding areas within 20–30 miles of Dallas & Plano
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<style>
+    /* ===============================
+   SERVICE CORRIDOR SECTION
+================================ */
+
+.service-corridor{
+  padding:100px 24px;
+  background:#ffffff;
+}
+
+.corridor-container{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap:80px;
+  align-items:center;
+}
+
+/* LEFT IMAGE CARD */
+
+.corridor-image{
+  position:relative;
+  height:520px;
+  border-radius:32px;
+  background-image:url("{{ url_for('static', filename='images/dfwlogo.png') }}");
+  background-size:cover;
+  background-position:center;
+  overflow:hidden;
+}
+
+/* Soft dark overlay */
+
+.corridor-image::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  
+}
+
+/* Badge */
+
+.corridor-badge{
+  position:absolute;
+  z-index:2;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  background:#2e483f;
+  color:#ffffff;
+  padding:22px 48px;
+  border-radius:999px;
+  font-size:26px;
+  font-weight:800;
+  letter-spacing:1px;
+  border:4px solid #ffffff;
+  box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* RIGHT CONTENT */
+
+.corridor-content{
+  display:flex;
+  flex-direction:column;
+  gap:26px;
+}
+
+/* Section Title */
+
+.corridor-title{
+  font-size:22px;
+  font-weight:800;
+  color:#1a2924;
+  letter-spacing:0.5px;
+}
+
+/* Pills Grid */
+
+.corridor-pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+/* Individual Pill */
+
+.corridor-pills span{
+  padding:12px 22px;
+  border:2px solid #1a2924;
+  border-radius:999px;
+  font-size:15px;
+  font-weight:600;
+  color:#1a2924;
+  background:#ffffff;
+  transition:0.25s ease;
+  cursor:default;
+}
+
+.corridor-pills span:hover{
+  background:#1a2924;
+  color:#ffffff;
+  transform:translateY(-3px);
+}
+
+/* Bottom Note */
+
+.corridor-note{
+  margin-top:20px;
+  background:#f3f6f5;
+  padding:18px 22px;
+  border-radius:14px;
+  font-size:15px;
+  color:#4b5f56;
+  font-weight:600;
+  max-width:520px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media(max-width:900px){
+
+  .corridor-container{
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+
+  .corridor-image{
+    height:360px;
+  }
+
+  .corridor-badge{
+    font-size:20px;
+    padding:18px 36px;
+  }
+
+}
+
+</style>
+
+
+<section class="cta-final">
+
+  <div class="cta-box">
+
+    <h2>Schedule Your Cleaning With DFW Clean Collective</h2>
+
+    <p>
+      Professional residential and commercial cleaning services across the Dallas–Fort Worth area.
+      Book online in minutes or request a free quote today.
+    </p>
+
+    <div class="cta-buttons">
+
+      <a href="/booking" class="cta-btn primary">
+        Book Cleaning Online
+      </a>
+
+      <a href="/quote" class="cta-btn secondary">
+        Request a Free Quote
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+<style>
+    /* ============================
+   FINAL CTA CONTAINER
+============================ */
+
+.cta-final{
+  padding:120px 24px;
+  background:#ffffff;
+}
+
+/* Card Container */
+
+.cta-box{
+  max-width:1100px;
+  margin:0 auto;
+  background:#dadedd;
+  border-radius:28px;
+  padding:90px 40px;
+  text-align:center;
+  box-shadow:0 18px 50px rgba(0,0,0,0.08);
+}
+
+/* Heading */
+
+.cta-box h2{
+  font-size:42px;
+  font-weight:800;
+  letter-spacing:0.3px;
+  color:#1a2924;
+  margin-bottom:18px;
+}
+
+/* Text */
+
+.cta-box p{
+  max-width:760px;
+  margin:0 auto 60px;
+  font-size:18px;
+  line-height:1.6;
+  color:#4b5f56;
+}
+
+/* Buttons */
+
+.cta-buttons{
+  display:flex;
+  justify-content:center;
+  gap:28px;
+  flex-wrap:wrap;
+}
+
+.cta-btn{
+  padding:18px 44px;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:16px;
+  font-weight:700;
+  transition:0.3s ease;
+}
+
+/* Primary */
+
+.cta-btn.primary{
+  background:#2e483f;
+  color:#ffffff;
+}
+
+.cta-btn.primary:hover{
+  background:#1a2924;
+  transform:translateY(-3px);
+  box-shadow:0 10px 22px rgba(0,0,0,0.18);
+}
+
+/* Secondary */
+
+.cta-btn.secondary{
+  background:#ffffff;
+  color:#1a2924;
+  border:2px solid #1a2924;
+}
+
+.cta-btn.secondary:hover{
+  background:#1a2924;
+  color:#ffffff;
+  transform:translateY(-3px);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+  .cta-box{
+    padding:60px 24px;
+  }
+
+  .cta-box h2{
+    font-size:32px;
+  }
+
+  .cta-btn{
+    width:100%;
+    max-width:300px;
+  }
+
+}
+
+</style>
+
+{% endblock %}

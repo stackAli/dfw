@@ -1,0 +1,348 @@
+{% extends "base.html" %}
+{% block title %}Cleaning Services in Collin & Rockwall County, Texas{% endblock %}
+{% block content %}
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+  <div class="hero-container">
+
+    <!-- LEFT -->
+    <div class="hero-content">
+      <span class="hero-label">DFW Clean Collective</span>
+
+      <h1>Cleaning Services in Collin & Rockwall County, Texas</h1>
+
+      <h2>Trusted Residential & Commercial Cleaning Near You</h2>
+
+      <p>
+        House Cleaning, Deep Cleaning, Move-In/Move-Out,
+        Apartment, Kitchen, Bathroom & Post-Construction Cleaning.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="/booking" class="btn-primary">Book Your Cleaning</a>
+        <a href="/quote" class="btn-secondary">Get Free Quote</a>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="hero-image">
+      <img src="{{ url_for('static', filename='images/hero-location.jpg') }}" alt="Professional Cleaning Service">
+    </div>
+
+  </div>
+</section>
+<section class="service-areas">
+  <div class="service-areas-intro">
+    <p>
+      DFW Clean Collective provides professional residential and commercial cleaning
+      services throughout the Dallas–Fort Worth area. Our local team serves homes
+      and businesses across North & East Dallas suburbs and surrounding communities. 
+    </p>
+  </div>
+
+  <h2 class="service-areas-title">TEXAS SERVICE AREAS</h2>
+
+  <div class="service-areas-grid">
+
+    <!-- Dallas -->
+    <div class="area-card">
+      <h3>Dallas, TX</h3>
+      <p class="area-text">Service Areas: Dallas & nearby suburbs</p>
+      <a href="/locations/dallas" class="area-link">View Details</a>
+    </div>
+
+    <!-- Plano -->
+    <div class="area-card">
+      <h3>Plano, TX</h3>
+      <p class="area-text">Service Areas: Plano & Collin County</p>
+      <a href="/locations/plano" class="area-link">View Details</a>
+    </div>
+
+    <!-- Garland -->
+    <div class="area-card">
+      <h3>Garland, TX</h3>
+      <p class="area-text">Service Areas: Garland & surrounding</p>
+      <a href="/locations/garland" class="area-link">View Details</a>
+    </div>
+
+    <!-- Rockwall -->
+    <div class="area-card">
+      <h3>Rockwall, TX</h3>
+      <p class="area-text">Service Areas: Rockwall & neighbors</p>
+      <a href="/locations/rockwall" class="area-link">View Details</a>
+    </div>
+
+    <!-- Wylie -->
+    <div class="area-card">
+      <h3>Wylie, TX</h3>
+      <p class="area-text">Service Areas: Wylie & nearby communities</p>
+      <a href="/locations/wylie" class="area-link">View Details</a>
+    </div>
+
+    <!-- Sachse -->
+    <div class="area-card">
+      <h3>Sachse, TX</h3>
+      <p class="area-text">Service Areas: Sachse & Collin County</p>
+      <a href="/locations/sachse" class="area-link">View Details</a>
+    </div>
+
+    <!-- Murphy -->
+    <div class="area-card">
+      <h3>Murphy, TX</h3>
+      <p class="area-text">Service Areas: Murphy & neighbors</p>
+      <a href="/locations/murphy" class="area-link">View Details</a>
+    </div>
+
+    <!-- Lucas -->
+    <div class="area-card">
+      <h3>Lucas, TX</h3>
+      <p class="area-text">Service Areas: Lucas & surrounding</p>
+      <a href="/locations/lucas" class="area-link">View Details</a>
+    </div>
+
+    <!-- Parker -->
+    <div class="area-card">
+      <h3>Parker, TX</h3>
+      <p class="area-text">Service Areas: Parker & vicinity</p>
+      <a href="/locations/parker" class="area-link">View Details</a>
+    </div>
+
+    <!-- Lavon -->
+    <div class="area-card">
+      <h3>Lavon, TX</h3>
+      <p class="area-text">Service Areas: Lavon & neighbors</p>
+      <a href="/locations/lavon" class="area-link">View Details</a>
+    </div>
+
+    <!-- Rowlett -->
+    <div class="area-card">
+      <h3>Rowlett, TX</h3>
+      <p class="area-text">Service Areas: Rowlett & adjacent</p>
+      <a href="/locations/rowlett" class="area-link">View Details</a>
+    </div>
+
+    <!-- Nevada -->
+    <div class="area-card">
+      <h3>Nevada, TX</h3>
+      <p class="area-text">Service Areas: Nevada & nearby</p>
+      <a href="/locations/nevada" class="area-link">View Details</a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+
+/* ================= HERO ================= */
+
+.hero{
+  padding:120px 0;
+  background:#eaedec;
+}
+
+.hero-container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 24px;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+/* LABEL */
+
+.hero-label{
+  display:block;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:#2e483f;
+  margin-bottom:12px;
+}
+
+/* TEXT */
+
+.hero-content h1{
+  font-size:42px;
+  font-weight:800;
+  line-height:1.2;
+  color:#1a2924;
+  margin-bottom:16px;
+}
+
+.hero-content h2{
+  font-size:20px;
+  font-weight:600;
+  color:#1a2924;
+  margin-bottom:14px;
+}
+
+.hero-content p{
+  font-size:16px;
+  line-height:1.6;
+  color:#4b5f56;
+  max-width:520px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+  margin-top:28px;
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.btn-primary{
+  background:#2e483f;
+  color:#ffffff;
+  padding:14px 30px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s ease;
+}
+
+.btn-primary:hover{
+  background:#1a2924;
+  transform:translateY(-3px);
+}
+
+.btn-secondary{
+  background:#ffffff;
+  border:2px solid #1a2924;
+  padding:14px 30px;
+  border-radius:999px;
+  text-decoration:none;
+  color:#1a2924;
+  font-weight:600;
+  transition:0.3s ease;
+}
+
+.btn-secondary:hover{
+  background:#1a2924;
+  color:#ffffff;
+  transform:translateY(-3px);
+}
+
+/* IMAGE */
+
+.hero-image{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+
+.hero-image img{
+  width:100%;
+  max-width:520px;
+  height:auto;
+  border-radius:28px;
+  object-fit:cover;
+  box-shadow:0 25px 60px rgba(0,0,0,0.25);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+  .hero-container{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero-content{
+    align-items:center;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .hero-content h1{
+    font-size:32px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .btn-primary,
+  .btn-secondary{
+    width:100%;
+    text-align:center;
+  }
+
+}
+.service-areas {
+  padding:80px 24px;
+  text-align:center;
+}
+
+.service-areas-title {
+  font-size:32px;
+  font-weight:800;
+  margin:36px 0;
+  color:#1a2924;
+}
+
+.service-areas-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:32px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.area-card {
+  background:#ffffff;
+  padding:24px 20px;
+  border:2px solid #1a2924;
+  border-radius:18px;
+  box-shadow:8px 8px 0 #1a2924;
+  text-align:left;
+  min-height: 150px;
+  transition:all 0.3s ease;
+
+}
+/* Hover Effect */
+
+.area-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(0,0,0,0.18);
+}
+
+.area-card h3 {
+  font-size:22px;
+  font-weight:800;
+  margin-bottom:8px;
+  color:#1a2924;
+}
+
+.area-text {
+  font-size:16px;
+  color:#4b5f56;
+  margin:10px 0;
+}
+
+.area-link {
+  font-size:16px;
+  font-weight:700;
+  color:#2e483f;
+  text-decoration:none;
+  transition:0.25s ease;
+}
+
+.area-link:hover {
+  color:#1a2924;
+  text-decoration:underline;
+}
+
+</style>
+
+{% endblock %}
