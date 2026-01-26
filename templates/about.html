@@ -284,31 +284,53 @@
   box-shadow:0 25px 60px rgba(0,0,0,0.25);
 }
 
-/* ================= TABLET ================= */
+
+/* ===============================
+   TABLET (≤1024px)
+=============================== */
 
 @media(max-width:1024px){
+
+  .story-container{
+    gap:32px;
+  }
 
   .story-content h2{
     font-size:34px;
   }
 
+  .story-content p{
+    font-size:15.5px;
+  }
+
+  .btn-primary,
+  .btn-secondary{
+    padding:13px 24px;
+  }
+
 }
 
-/* ================= MOBILE ================= */
+/* ===============================
+   MOBILE (≤900px)
+=============================== */
 
 @media(max-width:900px){
 
+  .our-story{
+    padding:60px 0;
+  }
+
   .story-container{
     grid-template-columns:1fr;
+    text-align:center;
   }
 
   .story-content{
-    text-align:center;
     align-items:center;
   }
 
   .story-content p{
-    max-width:100%;
+    max-width:600px;
   }
 
   .story-image img{
@@ -317,12 +339,28 @@
 
 }
 
-/* ================= SMALL PHONES ================= */
+/* ===============================
+   SMALL PHONES (≤480px)
+=============================== */
 
 @media(max-width:480px){
 
   .story-content h2{
     font-size:28px;
+  }
+
+  .story-label{
+    font-size:13px;
+  }
+
+  .story-content p{
+    font-size:15px;
+  }
+
+  .btn-primary,
+  .btn-secondary{
+    width:100%;
+    text-align:center;
   }
 
 }
