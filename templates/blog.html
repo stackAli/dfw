@@ -1,0 +1,315 @@
+{% extends "base.html" %}
+{% block title %}Cleaning Tips & Blog | DFW Clean Collective{% endblock %}
+
+{% block content %}
+
+<!-- ================= BLOG HERO ================= -->
+<section class="blog-hero">
+  <div class="blog-hero-inner">
+    <span class="blog-kicker">DFW CLEAN COLLECTIVE BLOG</span>
+    <h1>Cleaning tips that actually help.</h1>
+    <p>
+      Quick guides, checklists, and pro-level cleaning advice for homes, apartments,
+      and businesses across Dallas & DFW.
+    </p>
+
+    <div class="blog-hero-actions">
+      <a class="btn-solid" href="/contact">Request Service</a>
+      <a class="btn-ghost" href="/services">See Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BLOG CONTENT ================= -->
+<section class="blog-wrap">
+
+  <!-- FEATURED POST -->
+  <a href="/blog/how-to-keep-home-clean" class="featured-card">
+    <div class="featured-media">
+      <img src="{{ url_for('static', filename='images/s1.webp') }}" alt="Cleaning tips for a tidy home">
+    </div>
+
+    <div class="featured-body">
+      <div class="meta-row">
+        <span class="tag">Home Care</span>
+        <span class="dot"></span>
+        <span class="meta">6 min read</span>
+        <span class="dot"></span>
+        <span class="meta">DFW Clean Collective</span>
+      </div>
+
+      <h2>How to Keep Your Home Clean Between Professional Cleanings</h2>
+      <p class="excerpt">
+        Small daily habits that prevent clutter, reduce dust, and keep your kitchen
+        and bathrooms feeling fresh all week.
+      </p>
+
+      <span class="read-more">Read article →</span>
+    </div>
+  </a>
+
+  <!-- GRID -->
+  <div class="blog-grid">
+
+    <a href="/blog/weekly-cleaning-checklist" class="blog-card">
+      <div class="card-media">
+        <img src="{{ url_for('static', filename='images/s1.webp') }}" alt="Weekly cleaning checklist">
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="tag">Checklist</span><span class="dot"></span><span class="meta">4 min read</span>
+        </div>
+        <h3>The Weekly Cleaning Checklist for Busy People</h3>
+        <p class="excerpt">A simple weekly routine that keeps your place under control without burning your weekend.</p>
+        <span class="read-more">Read →</span>
+      </div>
+    </a>
+
+    <a href="/blog/deep-clean-vs-standard-clean" class="blog-card">
+      <div class="card-media">
+        <img src="{{ url_for('static', filename='/images/s2.webp') }}" alt="Deep clean vs standard cleaning">
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="tag">Guides</span><span class="dot"></span><span class="meta">5 min read</span>
+        </div>
+        <h3>Deep Clean vs Standard Clean: What’s the Difference?</h3>
+        <p class="excerpt">What you get in each service, when to book deep cleaning, and how to maintain results.</p>
+        <span class="read-more">Read →</span>
+      </div>
+    </a>
+
+    <a href="/blog/move-out-cleaning-tips" class="blog-card">
+      <div class="card-media">
+        <img src="{{ url_for('static', filename='/images/s3.webp') }}" alt="Move out cleaning tips">
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="tag">Move-Out</span><span class="dot"></span><span class="meta">6 min read</span>
+        </div>
+        <h3>Move-Out Cleaning Tips to Help You Get Your Deposit Back</h3>
+        <p class="excerpt">The spots landlords check first, plus a fast plan to avoid last-minute panic cleaning.</p>
+        <span class="read-more">Read →</span>
+      </div>
+    </a>
+
+  </div>
+
+</section>
+<style>
+    /* =========================
+BLOG (Theme Matched)
+========================= */
+
+.blog-hero{
+  background:#4f83bf;
+  color:#fff;
+  padding:110px 8% 70px;
+}
+
+.blog-hero-inner{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.blog-kicker{
+  display:inline-block;
+  font-size:12px;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  font-weight:700;
+  color:rgba(255,255,255,.85);
+  margin-bottom:14px;
+}
+
+.blog-hero h1{
+  font-size:54px;
+  line-height:1.05;
+  letter-spacing:-1px;
+}
+
+.blog-hero p{
+  margin-top:16px;
+  max-width:720px;
+  color:rgba(255,255,255,.9);
+  font-size:18px;
+  line-height:1.7;
+}
+
+.blog-hero-actions{
+  margin-top:28px;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.btn-solid,
+.btn-ghost{
+  display:inline-block;
+  padding:14px 22px;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+  transition:.25s ease;
+}
+
+.btn-solid{
+  background:#fff;
+  color:#4f83bf;
+}
+
+.btn-solid:hover{
+  transform:translateY(-2px);
+  background:#f4f6ff;
+}
+
+.btn-ghost{
+  border:2px solid rgba(255,255,255,.9);
+  color:#fff;
+}
+
+.btn-ghost:hover{
+  background:#fff;
+  color:#4f83bf;
+  transform:translateY(-2px);
+}
+
+/* WRAP */
+
+.blog-wrap{
+  max-width:1100px;
+  margin:0 auto;
+  padding:70px 20px 90px;
+}
+
+/* META */
+
+.meta-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:12px;
+}
+
+.tag{
+  display:inline-block;
+  padding:7px 12px;
+  background:#cadaec;
+  color:#1b1b1b;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+}
+
+.meta{
+  font-size:13px;
+  color:#6a6a6a;
+  font-weight:600;
+}
+
+.dot{
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:#b5b5b5;
+}
+
+/* FEATURED CARD */
+
+.featured-card{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:0;
+  border-radius:26px;
+  overflow:hidden;
+  text-decoration:none;
+  color:#1b1b1b;
+  box-shadow:0 30px 70px rgba(0,0,0,.12);
+  margin-bottom:46px;
+  transition:.3s ease;
+  background:#fff;
+}
+
+.featured-card:hover{
+  transform:translateY(-6px);
+}
+
+.featured-media img{
+  height: 50vh;
+  width: auto;
+  object-fit:cover;
+  display:block;
+  min-height:340px;
+}
+
+.featured-body{
+  padding:34px 34px 30px;
+}
+
+.featured-body h2{
+  font-size:28px;
+  line-height:1.2;
+  margin-bottom:12px;
+}
+
+.excerpt{
+  color:#555;
+  line-height:1.7;
+  margin-bottom:18px;
+}
+
+.read-more{
+  font-weight:900;
+  color:#4f83bf;
+}
+
+/* GRID CARDS */
+
+.blog-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:28px;
+}
+
+.blog-card{
+  background:#fff;
+  border-radius:22px;
+  overflow:hidden;
+  text-decoration:none;
+  color:#1b1b1b;
+  box-shadow:0 20px 45px rgba(0,0,0,.09);
+  transition:.3s ease;
+}
+
+.blog-card:hover{
+  transform:translateY(-6px);
+}
+
+.card-media img{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+  display:block;
+}
+
+.card-body{
+  padding:22px 22px 20px;
+}
+
+.blog-card h3{
+  font-size:18px;
+  line-height:1.25;
+  margin-bottom:10px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+  .blog-hero h1{ font-size:40px; }
+  .featured-card{ grid-template-columns:1fr; }
+  .featured-media img{ min-height:240px; }
+}
+
+</style>
+{% endblock %}
