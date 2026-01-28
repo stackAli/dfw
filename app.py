@@ -33,7 +33,7 @@ def about():
 def contact():
     return render_template("contact.html")
 
-SERVICES_DIR = "pages/services"
+SERVICES_DIR = os.path.join(BASE_DIR, "pages", "services")
 
 @app.route("/services/<slug>")
 def service_page(slug):
@@ -109,7 +109,7 @@ def blog_post():
     return render_template("blog_post.html")
 
 
-CONTENT_ROOT = "pages"
+CONTENT_ROOT = os.path.join(BASE_DIR, "pages")
 
 @app.route("/admin/content")
 def admin_content():
