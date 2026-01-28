@@ -130,13 +130,23 @@ def admin_content():
 @app.route("/admin/content/edit/<path:file_path>", methods=["GET","POST"])
 def admin_edit_content(file_path):
 
-    # Allow both:
-    # services/file.md
-    # pages/services/file.md
-    if file_path.startswith("pages/"):
-        file_path = file_path.replace("pages/", "", 1)
+    # If the path is already an absolute path
+    if os.path.isabs(file_path):
+        real_path = file_path
+    else:
+        # Normalize relative path into your content root
+        normalized = file_path
+        # Strip potential leading "pages/"
+        if normalized.startswith("pages/"):
+            normalized = normalized.replace("pages/", "", 1)
 
-    real_path = os.path.join(CONTENT_ROOT, file_path)
+        real_path = os.path.join(CONTENT_ROOT, normalized)
+
+    # Prevent directory traversal
+    real_path = os.path.normpath(real_path)
+
+    if not real_path.startswith(CONTENT_ROOT):
+        abort(403)  # forbid editing outside content root
 
     if not os.path.exists(real_path):
         abort(404)
@@ -147,11 +157,11 @@ def admin_edit_content(file_path):
         # Normalize Windows newlines -> Unix
         new_content = new_content.replace("\r\n", "\n")
 
-        # Prevent exponential blank lines
+        # Collapse repeated blank lines
         while "\n\n\n" in new_content:
             new_content = new_content.replace("\n\n\n", "\n\n")
 
-        # Remove leading junk only
+        # Remove leading whitespace only
         new_content = new_content.lstrip()
 
         with open(real_path, "w", encoding="utf-8", newline="\n") as f:
