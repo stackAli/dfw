@@ -33,7 +33,25 @@ def about():
 def contact():
     return render_template("contact.html")
 
+SERVICES_DIR = "pages/services"
 
+@app.route("/services/<slug>")
+def service_page(slug):
+
+    md_path = os.path.join(PAGES_DIR, f"{slug}.md")
+
+    if not os.path.exists(md_path):
+        abort(404)
+
+    post = frontmatter.load(md_path)
+    data = post.metadata
+
+    return render_template(
+        "baseservice.html",
+        phone="9809902722",
+        phone_display="(980) 990-2722",
+        **data
+    )
 # --------------------
 # DYNAMIC MD PAGES
 # --------------------
@@ -80,9 +98,7 @@ def md_page(slug):
     )
 
 
-# --------------------
-# RUN
-# --------------------
+
 
 if __name__ == "__main__":
     app.run(debug=True)
