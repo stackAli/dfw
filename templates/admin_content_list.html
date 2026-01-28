@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Content Manager</h1>
+
+<ul style="margin-top:30px">
+
+{% for file in files %}
+  <li style="margin-bottom:12px">
+    {{ file }}
+    —
+    <a href="/admin/content/edit/{{ file }}">
+      Edit
+    </a>
+  </li>
+{% endfor %}
+
+</ul>
+
+{% endblock %}

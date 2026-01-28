@@ -88,5 +88,5 @@ faqs:
     a: Yes — move-out cleaning is available to help you get your deposit back.
 
 cta_heading: Ready for Fresh, Clean Living?
-cta_text: Book apartment cleaning with trusted professionals today!
+cta_text: Book apartment cleaning professionals today!
 ---

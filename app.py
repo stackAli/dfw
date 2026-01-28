@@ -1,4 +1,4 @@
-from flask import Flask, render_template, abort
+from flask import Flask, render_template, abort, request, redirect
 import os
 import markdown
 import frontmatter
@@ -107,6 +107,66 @@ def blog():
 @app.route("/blog/how-to-keep-home-clean")
 def blog_post():
     return render_template("blog_post.html")
+
+
+CONTENT_ROOT = "pages"
+
+@app.route("/admin/content")
+def admin_content():
+    files = []
+
+    for root, dirs, filenames in os.walk(CONTENT_ROOT):
+        for name in filenames:
+            if name.endswith(".md"):
+                full = os.path.join(root, name)
+                files.append(full.replace("\\","/"))
+
+    return render_template(
+        "admin_content_list.html",
+        files=files
+    )
+
+
+@app.route("/admin/content/edit/<path:file_path>", methods=["GET","POST"])
+def admin_edit_content(file_path):
+
+    # Allow both:
+    # services/file.md
+    # pages/services/file.md
+    if file_path.startswith("pages/"):
+        file_path = file_path.replace("pages/", "", 1)
+
+    real_path = os.path.join(CONTENT_ROOT, file_path)
+
+    if not os.path.exists(real_path):
+        abort(404)
+
+    if request.method == "POST":
+        new_content = request.form["content"]
+
+        # Normalize Windows newlines -> Unix
+        new_content = new_content.replace("\r\n", "\n")
+
+        # Prevent exponential blank lines
+        while "\n\n\n" in new_content:
+            new_content = new_content.replace("\n\n\n", "\n\n")
+
+        # Remove leading junk only
+        new_content = new_content.lstrip()
+
+        with open(real_path, "w", encoding="utf-8", newline="\n") as f:
+            f.write(new_content)
+
+        return redirect("/admin/content")
+
+    with open(real_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    return render_template(
+        "admin_edit_content.html",
+        path=file_path,
+        content=content
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
