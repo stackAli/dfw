@@ -10,13 +10,13 @@
   
   <div class="hero-content">
     <div class="hero-badge">
-      Trusted Home Cleaning
+      Licensed • Insured • Trusted
     </div>
 
 
     <span class="hero-label">DFW Clean Collective</span>
 
-    <h1>Cleaning <span class="script">Services</span> in Dallas–Fort Worth</h1>
+    <h1>Cleaning <span class="script" style="color: white;">Services</span> in Dallas–Fort Worth</h1>
 
     <h2>Professional Residential & Commercial Cleaning</h2>
 
@@ -41,15 +41,16 @@
   .hero-badge {
   display: inline-block;
   padding: 6px 16px;
-  background: rgba(229, 189, 44, 0.15); /* soft gold tint */
+  background: rgba(0, 0, 0, 0.15); /* soft gold tint */
   color: white;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.6px;
   text-transform: uppercase;
   border-radius: 999px;
-  margin-bottom: 100px;
-  margin-top: -100px;
+  margin-bottom: 30px;
+  top: 10px;
+  
   backdrop-filter: blur(6px);
 }
 
@@ -57,7 +58,7 @@
    HERO SECTION
 ===================== */
 .scroll-down {
-  margin-bottom: -100px;
+  margin-bottom: -75px;
   position: absolute;
   bottom: 0px;
   left: 50%;
@@ -194,6 +195,7 @@
 ====================== */
 
 .hero-content h2{
+  font-family:'Playfair Display', serif;
   font-size:clamp(18px, 2.2vw, 26px);
   font-weight:600;
   margin-bottom:12px;
@@ -205,6 +207,7 @@
 ====================== */
 
 .hero-content h3{
+  
   font-size:16px;
   font-weight:500;
   margin-bottom:22px;
@@ -216,6 +219,7 @@
 ====================== */
 
 .hero-content p{
+  
   max-width:760px;
   font-size:clamp(16px, 2vw, 20px);
   line-height:1.7;
@@ -313,6 +317,12 @@
 ===================== */
 
 @media(max-width:480px){
+   .hero-badge{
+     margin-bottom: 100px;
+     margin-top: -100px;
+
+   }
+ 
   .hero{
     
     height: 80vh;
