@@ -7,8 +7,12 @@
 <section class="hero">
 
   <div class="hero-overlay"></div>
-
+  
   <div class="hero-content">
+    <div class="hero-badge">
+      Trusted Home Cleaning
+    </div>
+
 
     <span class="hero-label">DFW Clean Collective</span>
 
@@ -23,15 +27,73 @@
     <div class="hero-buttons">
       <a href="/booking" class="btn-primary">Book Your Cleaning</a>
       <a href="/quote" class="btn-secondary">Get Free Quote</a>
+      <a href="#service" class="scroll-down">
+      <span></span>
+    </a>
     </div>
+    
+
 
   </div>
 
 </section>
 <style>
+  .hero-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(229, 189, 44, 0.15); /* soft gold tint */
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  border-radius: 999px;
+  margin-bottom: 100px;
+  margin-top: -100px;
+  backdrop-filter: blur(6px);
+}
+
     /* =====================
    HERO SECTION
 ===================== */
+.scroll-down {
+  margin-bottom: -100px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 52px;
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 8px;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-down:hover {
+  opacity: 1;
+}
+
+.scroll-down span {
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  animation: scrollBounce 1.5s infinite;
+}
+
+/* Animation */
+@keyframes scrollBounce {
+  0%   { transform: translateY(0); opacity: 1; }
+  50%  { transform: translateY(14px); opacity: 0.6; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
 .hero{
   position:relative;
 }
@@ -40,11 +102,11 @@
 .hero::after{
   content:"";
   position:absolute;
-  top:25px;
-  left:25px;
-  right:25px;
-  bottom:25px;
-  border:3px solid rgba(0,0,0,0.6);
+  top:15px;
+  left:15px;
+  right:15px;
+  bottom:15px;
+  border:3px solid white;
   pointer-events:none;
   z-index:1;
 }
@@ -56,7 +118,7 @@
   align-items:center;
   justify-content: center;
   background:
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.25)),
     url("{{ url_for('static', filename='images/hero-home.jpg') }}")
     center/cover no-repeat;
 }
@@ -251,11 +313,17 @@
 ===================== */
 
 @media(max-width:480px){
-
+  .hero{
+    
+    height: 80vh;
+  }
+ 
   .btn-primary,
   .btn-secondary{
-    width:100%;
+   font-weight: 500;
     text-align:center;
+    padding: 8px 10px;
+    font-size: 1rem;
   }
 
 }
@@ -264,7 +332,7 @@
 
 
 
-<section class="services">
+<section class="services" id="service">
   <div class="container">
 
     <h2 class="section-title">Our Cleaning Services</h2>
