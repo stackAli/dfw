@@ -119,7 +119,12 @@ def admin_content():
         for name in filenames:
             if name.endswith(".md"):
                 full = os.path.join(root, name)
-                files.append(full.replace("\\","/"))
+
+                # Convert absolute path → relative to CONTENT_ROOT
+                rel_path = os.path.relpath(full, CONTENT_ROOT)
+                rel_path = rel_path.replace("\\", "/")
+
+                files.append(rel_path)
 
     return render_template(
         "admin_content_list.html",
