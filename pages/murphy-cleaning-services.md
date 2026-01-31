@@ -17,7 +17,6 @@ service_areas:
   - Fairview, TX
   - Lucas, TX
   - Parker, TX
-  - Lavon, TX
  
 
 mobile_services:

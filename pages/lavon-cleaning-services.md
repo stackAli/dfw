@@ -6,7 +6,6 @@ hero_subtitle: Reliable, Professional Cleaning Services in Lavon & DFW
 phone: "(469) 409-4332"
 
 service_areas:
-  - Lavon, TX
   - Wylie, TX
   - Sachse, TX
   - Murphy, TX

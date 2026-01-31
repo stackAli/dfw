@@ -17,7 +17,7 @@ service_areas:
   - Garland, TX
   - Rockwall, TX
   - Parker, TX
-  - Lavon, TX
+
 
 
 mobile_services:

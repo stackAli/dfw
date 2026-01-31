@@ -16,7 +16,6 @@ service_areas:
   - Garland, TX
   - Rockwall, TX
   - Dallas, TX
-  - Lavon, TX
   - Plano, TX
 
 mobile_services:

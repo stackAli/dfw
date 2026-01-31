@@ -18,7 +18,7 @@ service_areas:
   - Lavon, TX
   - Murphy, TX
   - Rowlett, TX
-  - Nevada, TX
+ 
 
 mobile_services:
   - House Cleaning
