@@ -417,7 +417,8 @@ def admin_new_content():
 
     return render_template("admin_new_content.html")
 
-SERVICES_DIR = "pages"
+SERVICES_DIR = PAGES_DIR
+
 
 def load_services():
     services = []
