@@ -546,6 +546,174 @@ body{
   }
 
 }
+/* ======================================================
+   GLOBAL MOBILE SAFETY
+====================================================== */
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  overflow-x:hidden;
+}
+
+/* ======================================================
+   HERO RESPONSIVE
+====================================================== */
+
+@media(max-width:900px){
+
+  .hero{
+    height:auto;
+    padding:80px 0;
+  }
+
+  .hero-overlay h1{
+    font-size:34px;
+    line-height:1.15;
+  }
+
+  .hero-overlay p{
+    font-size:17px;
+  }
+}
+
+@media(max-width:480px){
+
+  .hero-overlay h1{
+    font-size:28px;
+  }
+
+  .hero-overlay p{
+    font-size:15px;
+  }
+}
+
+/* ======================================================
+   HERO BUTTON STACKING
+====================================================== */
+
+.hero-overlay{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+}
+
+/* ======================================================
+   MAIN LAYOUT FIX
+====================================================== */
+
+.page-wrapper{
+  margin:80px auto;      /* center */
+  padding:0 20px;
+}
+
+@media(max-width:900px){
+
+  .page-wrapper{
+    grid-template-columns:1fr;
+    margin:40px auto;
+    gap:40px;
+  }
+
+}
+
+/* ======================================================
+   CONTENT AREA RESPONSIVE
+====================================================== */
+
+@media(max-width:600px){
+
+  .content-area h1{
+    font-size:24px;
+  }
+
+  .content-area h2{
+    font-size:19px;
+  }
+
+  .content-area p,
+  .content-area li{
+    font-size:15px;
+  }
+
+}
+
+/* ======================================================
+   SIDEBAR CARD MOBILE
+====================================================== */
+
+@media(max-width:900px){
+
+  .help-card{
+    position:static;
+    box-shadow:none;
+    margin-top:20px;
+  }
+
+}
+
+/* ======================================================
+   SERVICE PILLS
+====================================================== */
+
+.pill-list{
+  justify-content:center;
+}
+
+@media(max-width:480px){
+
+  .pill-list li a{
+    font-size:12px;
+    padding:9px 14px;
+  }
+
+}
+
+/* ======================================================
+   CTA RESPONSIVE
+====================================================== */
+
+@media(max-width:900px){
+
+  .cta{
+    padding:70px 20px;
+  }
+
+  .cta-inner h2{
+    font-size:26px;
+  }
+
+  .cta-inner p{
+    font-size:16px;
+  }
+
+  .cta-buttons{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .cta-buttons a{
+    width:100%;
+    max-width:340px;
+    text-align:center;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .cta-inner img{
+    width:70px;
+  }
+
+  .cta-inner h2{
+    font-size:22px;
+  }
+
+}
 
 </style>
 {% endblock %}
