@@ -1,0 +1,265 @@
+{# templates/terms_of_service.html #}
+{% extends "base.html" %}
+
+{% block title %}Terms of Service | DFW Clean Collective{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Read DFW Clean Collective’s Terms of Service, including payments, cancellations, liability, and satisfaction guarantee." />
+<link rel="canonical" href="{{ request.url }}" />
+
+<meta property="og:title" content="Terms of Service | DFW Clean Collective" />
+<meta property="og:description" content="Terms of Service for booking cleaning services with DFW Clean Collective." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ request.url }}" />
+{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Terms of Service</h1>
+    <p class="subtext">Effective Date: <strong>August 2025</strong></p>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container legal-content">
+
+    <p>
+      Welcome to <strong>DFW Clean Collective</strong>. By booking services through our website, phone, or any other method,
+      you agree to the following Terms of Service.
+    </p>
+
+    <h2>Services</h2>
+    <p>
+      DFW Clean Collective provides residential, commercial, and post-construction cleaning throughout the Dallas–Fort Worth metroplex.
+    </p>
+    <p>
+      Services are subject to availability and may vary depending on property condition, size, and location.
+    </p>
+
+    <h2>Pricing &amp; Payments</h2>
+    <p>
+      Prices are listed during booking but may be adjusted if property details differ from what was provided.
+    </p>
+    <p>
+      Payment is due at booking and processed securely through our payment provider.
+    </p>
+
+    <h2>Cancellations &amp; Rescheduling</h2>
+    <ul>
+      <li>Cancellations made more than 24 hours in advance → No fee.</li>
+      <li>Cancellations made between 12–24 hours before the appointment → $50 cancellation fee.</li>
+      <li>Cancellations made less than 12 hours before the appointment → 50% of the booking total will be charged.</li>
+      <li>If cleaners are unable to access your property at the scheduled time, a lockout fee may apply.</li>
+    </ul>
+
+    <h2>Refunds &amp; Satisfaction Guarantee</h2>
+    <p>
+      Payments are non-refundable once service is completed.
+    </p>
+    <p>
+      If you are not satisfied, notify us within 24 hours of the service. We may provide a complimentary re-clean or partial credit at our discretion.
+    </p>
+    <p>
+      Please see our
+      <a href="/cancellation-refund-policy">Cancellation &amp; Refund Policy</a>
+      for additional details.
+    </p>
+
+    <h2>Customer Responsibilities</h2>
+    <ul>
+      <li>Customers must provide accurate property details when booking.</li>
+      <li>Customers must ensure access to the property at the scheduled time.</li>
+      <li>Pets and valuables should be secured prior to service.</li>
+    </ul>
+
+    <h2>Liability</h2>
+    <p>
+      DFW Clean Collective is insured and takes care to protect your property.
+    </p>
+    <p>
+      We are not responsible for pre-existing damage, normal wear and tear, or fragile items not disclosed in advance.
+    </p>
+    <p>
+      Liability for damages, if proven to be caused by our team, will be limited to the cost of the service provided.
+    </p>
+
+    <h2>Changes to Terms</h2>
+    <p>
+      We reserve the right to update these Terms of Service at any time. Updates will be posted on this page with a new effective date.
+    </p>
+
+    <h2>Contact Information</h2>
+    <p><strong>DFW Clean Collective</strong></p>
+    <p>
+      Email: <a href="mailto:info@dfwcleancollective.com">info@dfwcleancollective.com</a><br />
+      Phone: <a href="tel:+14694094332">469-409-4332</a>
+    </p>
+
+    <hr />
+
+    <p class="legal-links">
+      Related:
+      <a href="/privacy-policy">Privacy Policy</a>
+      · <a href="/cancellation-refund-policy">Cancellation &amp; Refund Policy</a>
+    </p>
+
+  </div>
+</section>
+<style>
+    /* ================================
+   LEGAL / TERMS / POLICY PAGES
+================================ */
+
+/* HERO */
+.page-hero {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("/static/images/hero-home.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 110px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.page-hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.page-hero .subtext {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* CONTENT WRAPPER */
+.page-content {
+  padding: 70px 20px;
+  background: #fafafa;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* LEGAL BOX */
+.legal-content {
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* PARAGRAPHS */
+.legal-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+/* HEADINGS */
+.legal-content h2 {
+  margin-top: 45px;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  color: #111;
+  font-weight: 700;
+  position: relative;
+  padding-left: 14px;
+}
+
+.legal-content h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  height: 22px;
+  width: 4px;
+  background: #1f7ae0; /* brand accent */
+  border-radius: 2px;
+}
+
+/* LISTS */
+.legal-content ul {
+  margin-left: 22px;
+  margin-bottom: 22px;
+}
+
+.legal-content li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* LINKS */
+.legal-content a {
+  color: #1f7ae0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.legal-content a:hover {
+  text-decoration: underline;
+}
+
+/* HORIZONTAL RULE */
+.legal-content hr {
+  margin: 45px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* RELATED LINKS */
+.legal-links {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.legal-links a {
+  margin: 0 8px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+  .legal-content {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-hero {
+    padding: 80px 16px;
+  }
+
+  .legal-content {
+    padding: 28px;
+  }
+
+  .page-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .legal-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .legal-content p,
+  .legal-content li {
+    font-size: 0.95rem;
+  }
+}
+
+</style>
+{% endblock %}

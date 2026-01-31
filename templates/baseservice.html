@@ -100,7 +100,7 @@
 <style>
     .link-pill{
   text-decoration:none;
-  color:#4f83bf;
+  color:black;
   text-align:center;
   transition:.25s ease;
 }
@@ -295,7 +295,7 @@ body{
 }
 
 h2,h3{
-  color: #4f83bf;  
+  color: black;  
   font-weight:700;
   letter-spacing:-0.4px;
 }
@@ -314,7 +314,7 @@ SECTION SYSTEM
 }
 
 .section.light{
-  background:#cadaec;
+  background:#eff2f4;
 }
 
 .section.dark{
@@ -363,7 +363,7 @@ HERO
 .hero-inner{
   max-width:900px;
   text-align:center;
-  color:#fff;
+  color:white;
   padding:0 20px;
 }
 
@@ -380,7 +380,7 @@ HERO
 .hero-inner p{
   margin-top:18px;
   font-size:20px;
-  color:#e7e7e7;
+  color:white;
 }
 
 /* =========================
@@ -411,8 +411,8 @@ BUTTONS
 }
 
 .btn-outline{
-  border:2px solid #fff;
-  color:#fff;
+ background-color: white;
+  color:black;
   padding:16px 34px;
   border-radius:999px;
   font-weight:600;
@@ -436,7 +436,7 @@ HERO STATS
   justify-content:center;
   flex-wrap:wrap;
   font-size:15px;
-  color:#dedede;
+  color:black;
 }
 
 /* =========================
@@ -457,7 +457,7 @@ PILL GRID
   text-align:center;
 
   border:1.5px solid #4f83bf;
-  box-shadow:10px 10px 0 #4f83bf;
+  box-shadow:10px 10px 0 #ccdff2;
 
   transition:.25s ease;
 }
@@ -484,7 +484,7 @@ PROCESS STEPS
   text-align:center;
 
   border:1.5px solid #4f83bf;
-  box-shadow:10px 10px 0 #4f83bf;
+  box-shadow:10px 10px 0 #ccdff2;
 
   transition:.25s ease;
 }
@@ -529,7 +529,7 @@ INFO CARDS
   text-align:center;
 
   border:1.5px solid #4f83bf;
-  box-shadow:10px 10px 0 #4f83bf;
+  box-shadow:10px 10px 0 #ccdff2;
 
   transition:.25s ease;
 }
@@ -620,38 +620,6 @@ FAQ
   margin-bottom:8px;
 }
 
-/* =========================
-CTA
-========================= */
-
-.cta{
-  background:linear-gradient(
-    135deg,
-    #f36b21,
-    #ff8845
-  );
-  color:#fff;
-  padding:110px 8%;
-  text-align:center;
-}
-
-.cta h2{
-  font-size:42px;
-}
-
-.cta p{
-  color:#fff;
-  margin:14px 0 40px;
-}
-
-.cta .btn-primary{
-  background:#ffffff;
-  color:#111;
-}
-
-.cta .btn-primary:hover{
-  background:#f3f3f3;
-}
 
 /* =========================
 RESPONSIVE
@@ -669,6 +637,116 @@ RESPONSIVE
 
   .why-grid{
     gap:40px;
+  }
+
+}
+
+</style>
+<style>
+    /* ============================
+   FINAL CTA CONTAINER
+============================ */
+
+.cta-final{
+  
+  padding:120px 24px;
+  background:#ffffff;
+}
+
+/* Card Container */
+
+.cta-box{
+  border: 2px solid black;
+  max-width:1100px;
+  margin:0 auto;
+  background:#cadaec;
+  border-radius:28px;
+  padding:90px 40px;
+  text-align:center;
+  box-shadow:0 18px 50px rgba(0,0,0,0.08);
+}
+
+/* Heading */
+
+.cta-box h2{
+  font-size:42px;
+  font-weight:800;
+  letter-spacing:0.3px;
+  color:black;
+  margin-bottom:18px;
+}
+
+/* Text */
+
+.cta-box p{
+  max-width:760px;
+  margin:0 auto 60px;
+  font-size:18px;
+  line-height:1.6;
+  color:black;
+}
+
+/* Buttons */
+
+.cta-buttons{
+  display:flex;
+  justify-content:center;
+  gap:28px;
+  flex-wrap:wrap;
+}
+
+.cta-btn{
+  padding:18px 44px;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:16px;
+  font-weight:700;
+  transition:0.3s ease;
+}
+
+/* Primary */
+
+.cta-btn.primary{
+
+  background:#4f83bf;
+  color:white;
+}
+
+.cta-btn.primary:hover{
+  background:#4f83bf;
+  transform:translateY(-3px);
+  box-shadow:0 10px 22px rgba(0,0,0,0.18);
+}
+
+/* Secondary */
+
+.cta-btn.secondary{
+  background:#ffffff;
+  color:#000000;
+
+}
+
+.cta-btn.secondary:hover{
+  background:#4f83bf;
+  color:#000000;
+  transform:translateY(-3px);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+  .cta-box{
+    padding:60px 24px;
+  }
+
+  .cta-box h2{
+    font-size:32px;
+  }
+
+  .cta-btn{
+    width:100%;
+    max-width:300px;
   }
 
 }

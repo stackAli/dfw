@@ -95,6 +95,24 @@ Message:
 
     return render_template("contact.html")
 
+
+@app.route("/terms-of-service")
+def terms_of_service():
+    return render_template("terms_of_service.html")
+
+@app.route("/cancellation-refund-policy")
+def cancellation_refund_policy():
+    return render_template("cancellation_refund_policy.html")
+
+@app.route("/privacy-policy")
+def privacy_policy():
+    return render_template("privacy_policy.html")
+
+@app.route("/faq")
+def faq():
+    return render_template("faq.html")
+
+
 SERVICES_DIR = os.path.join(BASE_DIR, "pages", "services")
 
 @app.route("/services/<slug>")

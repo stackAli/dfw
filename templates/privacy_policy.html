@@ -1,0 +1,253 @@
+{# templates/privacy_policy.html #}
+{% extends "base.html" %}
+
+{% block title %}Privacy Policy | DFW Clean Collective{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Learn how DFW Clean Collective collects, uses, and protects your personal information." />
+<link rel="canonical" href="{{ request.url }}" />
+
+<meta property="og:title" content="Privacy Policy | DFW Clean Collective" />
+<meta property="og:description" content="Privacy practices for DFW Clean Collective cleaning services." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ request.url }}" />
+{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="subtext">Effective Date: <strong>August 2025</strong></p>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container legal-content">
+
+    <p>
+      At <strong>DFW Clean Collective</strong>, your privacy is important to us. This Privacy Policy explains how we collect, use,
+      and protect your information when you interact with our website or services.
+    </p>
+
+    <h2>Information We Collect</h2>
+    <ul>
+      <li>Name, phone number, email address</li>
+      <li>Service address and booking details</li>
+      <li>Payment and billing information</li>
+      <li>Website usage data (cookies, IP address, browser type)</li>
+    </ul>
+
+    <h2>How We Use Your Information</h2>
+    <ul>
+      <li>To schedule and perform cleaning services</li>
+      <li>To process payments</li>
+      <li>To communicate about bookings and updates</li>
+      <li>To improve our website and services</li>
+      <li>For customer support</li>
+    </ul>
+
+    <h2>Sharing of Information</h2>
+    <p>
+      We do not sell or rent your personal information.
+    </p>
+    <p>
+      We may share data with trusted service providers (payment processors, scheduling software) only as necessary
+      to operate our business.
+    </p>
+
+    <h2>Data Security</h2>
+    <p>
+      We implement reasonable security measures to protect your personal information. However, no method of
+      transmission over the internet is 100% secure.
+    </p>
+
+    <h2>Cookies</h2>
+    <p>
+      Our website may use cookies to enhance user experience and analyze site traffic. You may disable cookies
+      in your browser settings.
+    </p>
+
+    <h2>Your Rights</h2>
+    <p>
+      You may request access, correction, or deletion of your personal data by contacting us.
+    </p>
+
+    <h2>Policy Updates</h2>
+    <p>
+      We may update this Privacy Policy from time to time. Updates will be posted on this page with a new effective date.
+    </p>
+
+    <h2>Contact Us</h2>
+    <p>
+      Email: <a href="mailto:info@dfwcleancollective.com">info@dfwcleancollective.com</a><br>
+      Phone: <a href="tel:+14694094332">469-409-4332</a>
+    </p>
+
+    <hr>
+
+    <p class="legal-links">
+      Related:
+      <a href="/terms-of-service">Terms of Service</a>
+      · <a href="/cancellation-refund-policy">Cancellation & Refund Policy</a>
+    </p>
+
+  </div>
+</section>
+
+<style>
+    /* ======================================
+   PRIVACY POLICY PAGE STYLES
+====================================== */
+
+/* HERO SECTION */
+.page-hero {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("/static/images/hero-home.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 110px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.page-hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.page-hero .subtext {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* PAGE BODY */
+.page-content {
+  background: #f7f7f7;
+  padding: 70px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* CONTENT CARD */
+.legal-content {
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+
+/* PARAGRAPHS */
+.legal-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+/* SECTION HEADERS */
+.legal-content h2 {
+  margin-top: 45px;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111;
+  padding-left: 14px;
+  position: relative;
+}
+
+.legal-content h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 4px;
+  height: 22px;
+  background: #1f7ae0;
+  border-radius: 2px;
+}
+
+/* LISTS */
+.legal-content ul {
+  margin-left: 22px;
+  margin-bottom: 22px;
+}
+
+.legal-content li {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* LINKS */
+.legal-content a {
+  color: #1f7ae0;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.legal-content a:hover {
+  text-decoration: underline;
+}
+
+/* DIVIDER */
+.legal-content hr {
+  margin: 45px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* RELATED LINKS */
+.legal-links {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.legal-links a {
+  margin: 0 8px;
+}
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+
+@media (max-width: 900px) {
+  .legal-content {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-hero {
+    padding: 80px 16px;
+  }
+
+  .legal-content {
+    padding: 28px;
+  }
+
+  .page-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .legal-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .legal-content p,
+  .legal-content li {
+    font-size: 0.95rem;
+  }
+}
+
+</style>
+{% endblock %}

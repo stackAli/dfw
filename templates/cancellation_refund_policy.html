@@ -1,0 +1,236 @@
+{# templates/cancellation_refund_policy.html #}
+{% extends "base.html" %}
+
+{% block title %}Cancellation & Refund Policy | DFW Clean Collective{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Cancellation and refund rules for cleaning services with DFW Clean Collective – fees, timelines, re-clean options, and credits." />
+<link rel="canonical" href="{{ request.url }}" />
+
+<meta property="og:title" content="Cancellation & Refund Policy | DFW Clean Collective" />
+<meta property="og:description" content="Learn about cancellations, rescheduling, and refunds for DFW Clean Collective cleaning services." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ request.url }}" />
+{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Cancellation & Refund Policy</h1>
+    <p class="subtext">Effective Date: <strong>August 2025</strong></p>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container legal-content">
+
+    <p>
+      At <strong>DFW Clean Collective</strong>, we strive to provide scheduling flexibility while maintaining fairness for our cleaners and clients.
+    </p>
+
+    <h2>Cancellations</h2>
+    <p>
+      If you need to cancel a booked cleaning service, please review the timing and associated fees below.
+    </p>
+    <ul>
+      <li>
+        <strong>More than 24 hours before appointment:</strong> Cancel anytime more than 24 hours ahead — no cancellation fee.
+      </li>
+      <li>
+        <strong>12–24 hours before appointment:</strong> A $50 cancellation fee will be charged.
+      </li>
+      <li>
+        <strong>Less than 12 hours before appointment:</strong> 50% of the total booking charge will be applied as a cancellation fee.
+      </li>
+      <li>
+        <strong>No-show / inaccessible property:</strong> If cleaners arrive and cannot access the property, a lockout or no-show fee may apply equal to a portion of the booked service.
+      </li>
+    </ul>
+
+    <h2>Rescheduling</h2>
+    <p>
+      Reschedules made more than 24 hours before your service time may be made without penalty, subject to availability. Reschedules within 24 hours of service time may be treated as cancellations and subject to applicable fees above.
+    </p>
+
+    <h2>Refunds</h2>
+    <p>
+      Payments are generally non-refundable once the cleaning service has been completed.
+    </p>
+    <p>
+      If the service was not delivered as expected, contact us within 24 hours. We may consider providing a complimentary re-clean or a partial credit at our discretion.
+    </p>
+
+    <h2>Contact Us</h2>
+    <p>
+      Email: <a href="mailto:info@dfwcleancollective.com">info@dfwcleancollective.com</a><br />
+      Phone: <a href="tel:+14694094332">469-409-4332</a>
+    </p>
+
+    <hr />
+
+    <p class="legal-links">
+      Related:
+      <a href="/terms-of-service">Terms of Service</a>
+      · <a href="/privacy-policy">Privacy Policy</a>
+    </p>
+
+  </div>
+</section>
+<style>
+    /* =====================================
+   CANCELLATION & REFUND POLICY PAGE
+   (Legal Page Styling System)
+===================================== */
+
+/* HERO */
+.page-hero {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("/static/images/hero-home.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 110px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.page-hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.page-hero .subtext {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* PAGE WRAPPER */
+.page-content {
+  background: #f7f7f7;
+  padding: 70px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* CONTENT CARD */
+.legal-content {
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* TEXT */
+.legal-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+/* HEADINGS */
+.legal-content h2 {
+  margin-top: 45px;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111;
+  padding-left: 14px;
+  position: relative;
+}
+
+.legal-content h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 4px;
+  height: 22px;
+  background: #1f7ae0;
+  border-radius: 2px;
+}
+
+/* LISTS */
+.legal-content ul {
+  margin-left: 22px;
+  margin-bottom: 22px;
+}
+
+.legal-content li {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* LINKS */
+.legal-content a {
+  color: #1f7ae0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.legal-content a:hover {
+  text-decoration: underline;
+}
+
+/* SEPARATOR */
+.legal-content hr {
+  margin: 45px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* FOOTER LINKS */
+.legal-links {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.legal-links a {
+  margin: 0 8px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+  .legal-content {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-hero {
+    padding: 80px 16px;
+  }
+
+  .legal-content {
+    padding: 28px;
+  }
+
+  .page-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .legal-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .legal-content p,
+  .legal-content li {
+    font-size: 0.95rem;
+  }
+}
+
+</style>
+{% endblock %}
