@@ -17,7 +17,7 @@
       <p>{{ hero_description }}</p>
 
       <div class="hero-buttons">
-        <a href="tel:{{ phone }}" class="btn-primary">
+        <a href="/booking" class="btn-primary">
           Book Your Cleaning
         </a>
         <a href="/contact" class="btn-outline">Get a Free Quote</a>
@@ -80,9 +80,9 @@
 
   <div class="promise-grid">
 
-    <div>
+    <div style="display: flex; align-items: start; justify-content: start; flex-direction: column;">
       {% for p in promise_points %}
-        <h3>{{ p.title }}</h3>
+        <h3 style="color: white;">{{ p.title }}</h3>
         <p>{{ p.text }}</p>
       {% endfor %}
     </div>
@@ -117,10 +117,11 @@
 
   <div class="pill-grid">
   {% for city in coverage_areas %}
-    <a href="/{{ city.split(',')[0] | lower | replace(' ', '-') }}"
+    <a href="/{{ city.split(',')[0] | lower | replace(' ', '-') }}-cleaning-services"
         class="pill link-pill">
         {{ city }}
     </a>
+
 
   {% endfor %}
 </div>
@@ -293,7 +294,8 @@ body{
   line-height:1.6;
 }
 
-h1,h2,h3{
+h2,h3{
+  color: #4f83bf;  
   font-weight:700;
   letter-spacing:-0.4px;
 }
@@ -371,7 +373,7 @@ HERO
 }
 
 .hero-inner h1{
-  font-size:64px;
+  font-size:50px;
   line-height:1.05;
 }
 

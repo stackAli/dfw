@@ -69,7 +69,6 @@ coverage_areas:
   - Lucas, TX
   - Parker, TX
   - Lavon, TX
-  - Nevada, TX
   - Fairview, TX
 
 why_heading: Key Benefits of Commercial Cleaning

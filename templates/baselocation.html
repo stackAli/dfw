@@ -23,9 +23,10 @@
     <h1>{{ hero_title }}</h1>
     <p>{{ hero_subtitle }}</p>
 
-    <a href="/request-service" class="btn btn-hero">
-      Get Your Free Quote
+    <a href="/booking" class="btn btn-hero">
+      REQUEST ON-SITE SERVICES
     </a>
+    <a href="/contact" class="btn-secondary btn-hero"> REQUEST A FREE QUOTE</a>
   </div>
 </section>
 </header>
@@ -38,8 +39,9 @@
 
 <!-- ===== Primary Content ===== -->
 <article class="content-area">
-
+  
   {{ content | safe }}
+  
 
 </article>
 
@@ -99,16 +101,39 @@
 }
 
 </style>
- <ul class="pill-list">
-  <li><a href="/services/standard-clean">Standard Cleaning</a></li>
-  <li><a href="/services/deep-clean">Deep Cleaning</a></li>
-  <li><a href="/services/move-in-out-clean">Move-In / Move-Out</a></li>
-  <li><a href="/services/commercial-clean">Commercial Cleaning</a></li>
-  <li><a href="/services/post-construction-clean">Post Construction</a></li>
-  <li><a href="/services/apartment-clean">Apartment Cleaning</a></li>
-  <li><a href="/services/kitchen-clean">Kitchen Cleaning</a></li>
-  <li><a href="/services/bathroom-clean">Bathroom Cleaning</a></li>
+<ul class="pill-list">
+  {% for service in location_services %}
+
+    {# --- Build clean service slug --- #}
+    {% set service_slug = service|lower
+        |replace('&', 'and')
+        |replace(' / ', '-')
+        |replace('/', '-')
+        |replace(' ', '-')
+        |replace('--','-')
+        |trim('-')
+    %}
+
+    {# --- Clean location (remove "cleaning services") --- #}
+    {% set clean_location = current_location|lower
+        |replace(' cleaning services','')
+        |replace('cleaning services','')
+        |replace('-cleaning-services','')
+        |replace('cleaning-services','')
+        |replace('--','-')
+        |trim('-')
+    %}
+
+    <li>
+      <a href="/services/{{ service_slug }}-service-{{ clean_location }}-texas">
+        {{ service }}
+      </a>
+    </li>
+
+  {% endfor %}
 </ul>
+
+
 
 
 
@@ -129,11 +154,11 @@
     <p>{{ cta_subtext }}</p>
 
     <div class="cta-buttons">
-      <a href="tel:{{ phone }}" class="btn btn-primary">
-        CALL NOW FOR SERVICE
+      <a href="/contact" class="btn btn-primary">
+        REQUEST A FREE QUOTE
       </a>
 
-      <a href="/request-service" class="btn btn-primary">
+      <a href="/booking" class="btn btn-primary">
         REQUEST ON-SITE SERVICES
       </a>
     </div>
@@ -148,7 +173,7 @@
 body{
   background:#ffffff;
   color:#111;
-  line-height:1.7;
+  line-height:1.2;
   font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -190,22 +215,98 @@ body{
 /* ============================
    HERO BUTTON
 ============================ */
+/* ============================
+   HERO BUTTONS (Responsive)
+============================ */
+
+.btn-hero,
+.btn-secondary{
+  background:#4f83bf;
+  color:#fff;
+  padding:14px 22px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  transition:0.25s ease;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  white-space:nowrap;
+  font-size:16px;
+  min-height:48px;      
+  border: none;      /* Finger-friendly */
+}
+
+/* Primary */
 
 .btn-hero{
   background:#4f83bf;
   color:#fff;
-  padding:14px 30px;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:700;
-  transition:.25s ease;
-  display:inline-block;
 }
 
 .btn-hero:hover{
-  background:#4f83bf;
+  background:#3f73ad;
   transform:translateY(-2px);
-  box-shadow:0 6px 0 black;
+}
+
+/* Secondary */
+
+.btn-secondary{
+  background:#ffffff;
+  color:#4f83bf;
+  border:2px solid #4f83bf;
+  border: none;
+}
+
+.btn-secondary:hover{
+  background:#4f83bf;
+  color:#ffffff;
+  transform:translateY(-2px);
+}
+
+/* ============================
+   TABLET
+============================ */
+
+@media (max-width:1024px){
+
+  .btn-hero,
+  .btn-secondary{
+    padding:13px 20px;
+    font-size:15px;
+  }
+
+}
+
+/* ============================
+   MOBILE
+============================ */
+
+@media (max-width:768px){
+
+  .btn-hero,
+  .btn-secondary{
+    width:100%;                /* Full-width CTA */
+    font-size:15px;
+    padding:14px 18px;
+  }
+
+}
+
+/* ============================
+   SMALL PHONES
+============================ */
+
+@media (max-width:480px){
+
+  .btn-hero,
+  .btn-secondary{
+    font-size:14px;
+    padding:13px 16px;
+    min-height:46px;
+  }
+
 }
 
 /* ============================
@@ -419,6 +520,7 @@ body{
 .btn-primary:hover{
   background:#4f83bf;
 }
+
 
 /* ============================
    MOBILE

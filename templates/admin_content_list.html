@@ -1,21 +1,139 @@
 {% extends "base.html" %}
-
 {% block content %}
 
-<h1>Content Manager</h1>
+<style>
+.admin-wrap{
+  max-width:900px;
+  margin:60px auto;
+}
 
-<ul style="margin-top:30px">
+.admin-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+}
 
-{% for file in files %}
-  <li style="margin-bottom:12px">
-    {{ file }}
-    —
-    <a href="/admin/content/edit/{{ file }}">
-      Edit
-    </a>
-  </li>
-{% endfor %}
+.admin-actions{
+  display:flex;
+  gap:12px;
+}
 
-</ul>
+.btn-new{
+  background:#4f83bf;
+  color:#fff;
+  padding:10px 16px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:700;
+}
+
+.btn-logout{
+  background:#d11a2a;
+  color:#fff;
+  padding:10px 16px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:700;
+}
+
+.category-block{
+  margin-bottom:50px;
+}
+
+.category-title{
+  font-size:22px;
+  margin-bottom:15px;
+  border-bottom:2px solid #eee;
+  padding-bottom:6px;
+}
+
+.file-row{
+  background:#fff;
+  border:1px solid #ddd;
+  border-radius:8px;
+  padding:12px 14px;
+  margin-bottom:10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.file-path{
+  font-family:monospace;
+  font-size:14px;
+}
+
+.file-actions{
+  display:flex;
+  gap:12px;
+}
+
+.file-actions a{
+  text-decoration:none;
+  font-weight:700;
+  color:#4f83bf;
+}
+
+.file-actions button{
+  background:none;
+  border:none;
+  color:#d11a2a;
+  font-weight:700;
+  cursor:pointer;
+}
+</style>
+
+<div class="admin-wrap">
+
+  <div class="admin-header">
+    <h1>Content Manager</h1>
+
+    <div class="admin-actions">
+      <a class="btn-new" href="/admin/content/new">➕ New File</a>
+      <a class="btn-logout" href="/admin/logout">🚪 Logout</a>
+    </div>
+  </div>
+
+  {% for category, files in categories.items() %}
+
+    <div class="category-block">
+
+      <h2 class="category-title">{{ category }}</h2>
+
+      {% if files %}
+
+        {% for file in files %}
+        <div class="file-row">
+
+          <span class="file-path">{{ file }}</span>
+
+          <div class="file-actions">
+
+            <a href="/admin/content/edit/{{ file }}">✏️ Edit</a>
+
+            <form action="/admin/content/delete/{{ file }}"
+                  method="POST"
+                  style="display:inline;"
+                  onsubmit="return confirm('Delete this file?');">
+
+              <button type="submit">🗑️ Delete</button>
+
+            </form>
+
+          </div>
+
+        </div>
+        {% endfor %}
+
+      {% else %}
+        <p style="color:#777;">No files</p>
+      {% endif %}
+
+    </div>
+
+  {% endfor %}
+
+</div>
 
 {% endblock %}

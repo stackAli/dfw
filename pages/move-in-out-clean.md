@@ -70,7 +70,7 @@ coverage_areas:
   - Parker, TX
   - Lavon, TX
   - Fairview, TX
-  - Nevada, TX
+
 
 why_heading: Key Benefits of Move-In / Move-Out Cleaning
 why_choose:

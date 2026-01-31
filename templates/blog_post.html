@@ -1,64 +1,137 @@
 {% extends "base.html" %}
-{% block title %}How to Keep Your Home Clean | DFW Clean Collective{% endblock %}
+{% block title %}{{ title }} | DFW Clean Collective{% endblock %}
 
 {% block content %}
 
-<section class="blog-hero">
-  <h1>How to Keep Your Home Clean Between Professional Cleanings</h1>
-  <p>Published by DFW Clean Collective</p>
-</section>
-
-<section class="blog-content">
-
-  <p>
-  Keeping your home clean between professional visits doesn’t have to be difficult.
-  Small daily habits can make a huge difference.
-  </p>
-
-  <h2>1. Wipe Surfaces Daily</h2>
-  <p>Kitchen counters, bathroom vanities, and tables collect dust quickly.</p>
-
-  <h2>2. Tidy As You Go</h2>
-  <p>Putting items back immediately prevents clutter.</p>
-
-  <h2>3. Sweep High-Traffic Areas</h2>
-  <p>Entryways and kitchens benefit from quick daily sweeping.</p>
-
-  <h2>4. Schedule Regular Professional Cleanings</h2>
-  <p>Professional cleaning keeps buildup under control.</p>
-
-</section>
-
 <style>
 
+:root{
+  --primary:#4f83bf;
+  --text:#1e293b;
+  --muted:#64748b;
+  --card:#ffffff;
+  --border:rgba(15,23,42,.1);
+  --shadow:0 18px 45px rgba(15,23,42,.1);
+  --radius:22px;
+}
+/* =========================
+   BLOG IMAGES (Markdown)
+========================= */
+
+.blog-content img{
+  width:100%;
+  max-width:100%;
+  height:auto;
+  display:block;
+  margin:22px auto;
+  border-radius:18px;
+  box-shadow:0 18px 45px rgba(15,23,42,.10);
+  border:1px solid rgba(15,23,42,.10);
+}
+
+/* If markdown wraps image inside a <p>, keep spacing clean */
+.blog-content p:has(img){
+  margin:24px 0;
+}
+
+/* Optional: captions if you add <em> under an image */
+.blog-content p em{
+  display:block;
+  text-align:center;
+  color:var(--muted);
+  font-size:14px;
+  margin-top:10px;
+}
+
+/* HERO */
+
 .blog-hero{
-  background:#4f83bf;
+  padding:120px 6% 70px;
+  background:linear-gradient(135deg,#4f83bf,#3f73ad);
   color:#fff;
-  padding:100px 8% 60px;
   text-align:center;
 }
 
 .blog-hero h1{
-  font-size:42px;
+  max-width:900px;
+  margin:auto;
+  font-size:50px;
+  font-weight:900;
 }
+
+.blog-hero p{
+  margin-top:10px;
+  opacity:.9;
+}
+
+/* CONTENT */
 
 .blog-content{
-  max-width:800px;
-  margin:80px auto;
-  padding:0 20px;
-}
-
-.blog-content h2{
-  margin-top:40px;
-  font-size:24px;
+  max-width:1100px;
+  margin:-60px auto 90px;
+  padding:55px 60px;
+  background:#fff;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  border:1px solid var(--border);
 }
 
 .blog-content p{
-  margin-top:14px;
-  font-size:17px;
-  line-height:1.7;
+  font-size:18px;
+  line-height:1.9;
+  color:var(--text);
+  margin:18px 0;
+}
+
+.blog-content h2{
+  margin-top:44px;
+  font-size:28px;
+  color:var(--primary);
+}
+
+.blog-content ul{
+  list-style:none;
+  padding:0;
+  margin:22px 0;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+
+.blog-content ul li{
+  background:#f8fbff;
+  padding:14px 16px;
+  border-radius:999px;
+  border:1px solid rgba(79,131,191,.2);
+}
+
+.blog-content a{
+  color:#4f83bf;
+  font-weight:700;
+  text-decoration:none;
+}
+
+@media(max-width:900px){
+  .blog-hero h1{ font-size:34px; }
+  .blog-content{
+    padding:30px 20px;
+  }
+  .blog-content ul{
+    grid-template-columns:1fr;
+  }
 }
 
 </style>
+
+<!-- HERO -->
+<section class="blog-hero">
+  <h1>{{ hero_title }}</h1>
+  <p>{{ hero_subtitle }}</p>
+</section>
+
+<!-- BODY -->
+<section class="blog-content">
+  {{ content | safe }}
+</section>
 
 {% endblock %}

@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+/* =========================
+   ADMIN LOGIN
+========================= */
+
+.admin-login-wrapper{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f2f6ff;
+}
+
+.admin-login-card{
+  width:100%;
+  max-width:420px;
+  background:#ffffff;
+  padding:46px 40px;
+  border-radius:18px;
+  box-shadow:0 18px 45px rgba(0,0,0,.15);
+}
+
+.admin-login-card h2{
+  text-align:center;
+  margin-bottom:26px;
+  font-size:26px;
+  color:#1e293b;
+}
+
+.admin-login-card label{
+  font-size:13px;
+  font-weight:600;
+  color:#4f83bf;
+}
+
+.admin-login-card input{
+  width:100%;
+  padding:14px 16px;
+  border-radius:999px;
+  border:1px solid #ccd7ee;
+  font-size:14px;
+  outline:none;
+  margin-top:6px;
+}
+
+.admin-login-card input:focus{
+  border-color:#4f83bf;
+}
+
+.admin-login-card button{
+  margin-top:22px;
+  width:100%;
+  padding:14px;
+  border-radius:999px;
+  border:none;
+  background:#4f83bf;
+  color:#fff;
+  font-size:15px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.25s ease;
+}
+
+.admin-login-card button:hover{
+  background:#3f73ad;
+  transform:translateY(-2px);
+}
+
+.login-error{
+  background:#ffe5e5;
+  color:#b10000;
+  padding:12px 14px;
+  border-radius:10px;
+  font-size:14px;
+  margin-bottom:16px;
+  text-align:center;
+}
+
+/* Mobile */
+
+@media(max-width:480px){
+  .admin-login-card{
+    padding:36px 26px;
+  }
+}
+</style>
+
+<div class="admin-login-wrapper">
+
+  <div class="admin-login-card">
+
+    <h2>Admin Login</h2>
+
+    {% if error %}
+      <div class="login-error">{{ error }}</div>
+    {% endif %}
+
+    <form method="POST" autocomplete="off">
+
+      <label>Username</label>
+      <input type="text" name="username" required autofocus>
+
+      <br><br>
+
+      <label>Password</label>
+      <input type="password" name="password" required>
+
+      <button type="submit">Login</button>
+
+    </form>
+
+  </div>
+
+</div>
+
+{% endblock %}

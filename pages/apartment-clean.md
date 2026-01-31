@@ -10,12 +10,14 @@ hero_stats:
   - One-Time or Recurring Service
 
 includes_heading: What’s Included in Apartment Cleaning
+
 includes:
-  - Full cleaning of kitchens: counters, cabinets, appliances, and floors
-  - Bathroom sanitization: tubs, showers, toilets, mirrors, and tile
-  - Bedroom care: dusting, vacuuming, and trash removal
-  - Living area cleaning: dust furniture, sweep and mop floors
+  - Full cleaning of kitchens including counters, cabinets, appliances, and floors
+  - Bathroom sanitization including tubs, showers, toilets, mirrors, and tile
+  - Bedroom care including dusting, vacuuming, and trash removal
+  - Living area cleaning including furniture dusting, sweeping, and mopping
   - General apartment tidying and surface wipe-downs
+
 
 process_heading: Our Apartment Cleaning Process
 process_intro: We make apartment cleaning seamless and thorough so you can enjoy a fresh, clean living space without lifting a finger.
@@ -70,7 +72,7 @@ coverage_areas:
   - Lucas, TX
   - Parker, TX
   - Lavon, TX
-  - Nevada, TX
+ 
 
 why_heading: Key Benefits of Apartment Cleaning
 why_choose:

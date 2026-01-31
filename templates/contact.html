@@ -2,9 +2,20 @@
 {% block title %}Contact DFW Clean Collective{% endblock %}
 {% block content %}
 
+
+
 <!-- ================= CONTACT HERO ================= -->
 
 <section class="contact-hero">
+   {% if success %}
+    <p style="background:#d4edda;
+              color:#155724;
+              padding:14px;
+              border-radius:10px;
+              margin-bottom:18px;">
+      ✅ Thank you! Your request has been sent.
+    </p>
+{% endif %}
 
   <div class="contact-overlay"></div>
 
@@ -33,6 +44,9 @@
       </p>
 
     </div>
+    {% if success %}
+   
+{% endif %}
 
     <!-- RIGHT FORM -->
     <div class="contact-form-card">
