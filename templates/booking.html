@@ -2,10 +2,31 @@
 {% block title %}Book Cleaning Service{% endblock %}
 {% block content %}
 
+<div id="booking-loader" style="
+  text-align:center;
+  padding:60px 20px;
+  font-size:18px;
+">
+  Loading booking system...
+</div>
 
+<iframe
+  id="booking-frame"
+  src="https://dfwcleancollective.bookingkoala.com/booknow?embed=true"
+  style="border:none;height:1000px;width:100%;display:none;"
+  scrolling="no"
+></iframe>
 
-<iframe src="https://dfwcleancollective.bookingkoala.com/booknow?embed=true" style="border:none;height:1000px" width="100%" scrolling="no"></iframe>
 <script src="https://dfwcleancollective.bookingkoala.com/resources/embed.js" defer></script>
 
+<script>
+const frame = document.getElementById("booking-frame");
+const loader = document.getElementById("booking-loader");
+
+frame.onload = function () {
+  loader.style.display = "none";
+  frame.style.display = "block";
+};
+</script>
 
 {% endblock %}
